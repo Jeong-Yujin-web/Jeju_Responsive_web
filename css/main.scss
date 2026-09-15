@@ -1,0 +1,800 @@
+*{margin: 0; padding: 0;}
+li{list-style: none;}
+a{color: black; text-decoration: none;}
+
+img{
+display: block; width: 100%; height: auto;
+}
+html{font-size: 16px;}
+/***************** common ******************/
+$point-color:#468432;
+$sub-color01:#9AD872;$sub-color02:#EEFFDA;
+$bold-grey:#ccc;
+$middle-grey:#ddd;
+$light-grey:#eee;
+$font-middle-grey:#666;
+$font-light-grey:#999;
+$white:white;
+$default-font:"Noto Sans", sans-serif;
+$default-font-size:16px;
+$default-font-color:#333;
+$scrollbar-color: $point-color $sub-color02;
+body{
+  color: $default-font-color;
+}
+@mixin section-magin{
+  margin: 0 10px 30px 10px;
+}
+@mixin size($width, $height){
+  width: $width;
+  height: $height;
+}
+@mixin buttonHeader{
+  background-color: $white;
+  border: none;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+@mixin buttonActive{
+  background-color: $point-color;
+  border: none;
+  border-radius: 20px;
+  box-sizing: border-box;
+  color: $white;
+}
+@mixin buttongrey{
+  background-color: $white;
+  border-radius: 20px;
+  border: 1px solid $light-grey;
+  box-sizing: border-box;
+  color: $middle-grey;
+  align-items: center;
+  text-align: center;
+}
+@mixin buttonGreen{
+  background-color: $white;
+  border-radius: 20px;
+  border: 1px solid $point-color;
+  box-sizing: border-box;
+  color: $point-color;
+  align-items: center;
+  text-align: center;
+}
+@mixin title{
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+@mixin flex{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+@mixin flex-between{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+}
+.contents_title{
+  margin: 0 20px 10px 10px;
+  width: calc(100% - 20px);
+  @include flex-between;
+  p{
+    font-size: 1.2rem;
+  }
+  .more{
+    a{
+      font-size: 0.8rem;
+      color: $font-light-grey;
+    }
+  }
+}
+.mb{margin-bottom: 30px;}
+/***************** visual_main ****************/
+.visual_main_outer{
+  position: relative;
+  swiper-container {
+    width: 100%;
+    height: 100%;
+    --swiper-theme-color: #468432 !important;
+    --swiper-pagination-bullet-width: 10px;
+    --swiper-pagination-bullet-height: 10px;
+    --swiper-pagination-bullet-horizontal-gap: 5px;
+  }
+
+  swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  swiper-slide picture{
+    display:block;
+    width:100%;
+    height:100%;
+  }
+
+  swiper-slide picture img{
+    display:block;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+  }
+}
+/*************** metapo_outer ****************/
+.metapo_outer{
+  @include flex;
+  margin-bottom: 30px;
+  .metapo{
+    margin-right: 8px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: $default-font-color;
+    &:last-child{
+      margin-right: 0;
+    }
+    a{}
+  }
+  .metapo_pc,
+  .metapo_tablet{
+    display: none;
+  }
+}
+/*************** ai_outer ****************/
+.contents01_outer{
+  position: relative;
+  .contents_title{
+    width: 100%;
+    margin-left: 0;
+  }
+  .tab_outer{
+    flex-wrap: wrap;
+    display: flex;
+    label{
+      @include buttonGreen;
+      padding: 5px 6px;
+      margin-right: 5px;
+    }
+  }
+  #tab01,
+  #tab02,
+  #tab03,
+  #tab04{
+    display: none;
+  }
+  #tab01:checked ~ .contents01_box01,
+  #tab02:checked ~ .contents01_box02,
+  #tab03:checked ~ .contents01_box03,
+  #tab04:checked ~ .contents01_box04{
+    display: block;
+  }
+  #tab01:checked ~ .tab_outer .tab01,
+  #tab02:checked ~ .tab_outer .tab02,
+  #tab03:checked ~ .tab_outer .tab03,
+  #tab04:checked ~ .tab_outer .tab04{
+    background-color: $point-color;
+    color: $white;
+  }
+  .contents01_box01,
+  .contents01_box02,
+  .contents01_box03,
+  .contents01_box04{
+    display: none;
+    background-color: $sub-color02;
+    overflow: hidden;
+    position: relative;
+    .heart{
+      position: absolute;
+      top: 15px; right: 15px;
+      background-color: transparent;
+      border: none;
+      font-size: 1.4rem;
+      color: $middle-grey;
+      z-index: 11;
+      cursor: pointer;
+      &.active{
+        color: pink;
+      }
+    }
+  }
+  .illust_outer{
+    position: absolute;
+    top: 30px; right: -15px;
+  }
+  >div{
+    padding: 15px 10px;
+    >div{
+      float: left;
+      margin-right: 20px;
+    }
+    .contents_left{
+      position: relative;
+      img{
+        width: 150px; height: 95px;
+        border-radius: 20px;
+        margin-bottom: 8px;
+        &:nth-child(4){
+          margin-bottom: 0;
+        }
+      }
+    }
+    .contents_middle{
+      position: absolute;
+      top: calc(15% - 15px); right: -20px;
+      margin: 0 10px;
+      .line{
+      position: relative;
+      width: 1px; height: 309px;
+      background-color: $sub-color01;
+    }
+    .circle{
+      position: absolute;
+      left: -2px;
+      width: 5px; height: 5px;
+      background-color: $point-color;
+      border-radius: 50%;
+    }
+    >div{
+      &:nth-child(2){
+        top:0;
+      }
+      &:nth-child(3){
+        top: 103px;
+      }
+      &:nth-child(4){
+        top: 206px;
+      }
+      &:nth-child(5){
+        top: 309px;
+      }
+    }
+  }
+  .contents_right{
+    margin-top: 30px;
+      p{
+        margin-bottom: 6px;
+        font-size: 0.8rem;
+      }
+      .contents_place{
+        font-size: 1rem;
+      }
+    }
+  }
+}
+/*************** k-pick_outer ****************/
+@media all and (max-width: 768px) {
+  .contents02_outer{
+    .contents_title{
+    }
+    .page{
+      display: flex;
+      color: $sub-color01;
+      font-size: 1.4rem;
+      height: 30px;
+      justify-content: center;
+      button{
+        margin: 0 5px;
+        @include buttonHeader;
+        color: $point-color;
+        text-align: center;
+        line-height: 30px;
+        font-size: 1.2rem;
+      }
+      p{
+        margin: 0 5px;
+        text-align: center;
+        line-height: 30px;
+      }
+    }
+    .contents02_box_outer{
+      overflow-x: auto;
+      display: flex;
+      width: calc(100% - 10px);
+      margin-left: 10px;
+
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+
+      .contents02_box{
+        flex: 0 0 calc(100% - 10px);
+        position: relative;
+        margin: 0 0 10px 10px;
+
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+
+        &:last-child{
+          margin-right: 10px;
+        }
+        img{
+          border-radius: 20px;
+          height: 400px;
+        }
+        .artist_box{
+          width: 20%;
+          position: absolute;
+          top: 2%; right: 2%;
+          img{
+            width: 70%; height: 70%;
+            border-radius: 50%;
+            margin: 0 auto;
+          }
+          p{
+            font-size: 0.8rem;
+            color: $point-color;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 20px;
+            padding: 3px 0;
+            margin-top: 5px;
+          }
+        }
+        .text_box {
+          .linear_gradient1 {
+            width: 100%;
+            height: 50%;
+            background: linear-gradient(
+              rgba(112, 119, 50, 0),
+              rgba(112, 119, 50, 1)
+            );
+            border-radius: 0 0 20px 20px;
+            position: absolute;
+            bottom: 0;
+            .text {
+              position: absolute;
+              bottom: 0;
+              margin: 20px;
+              color: $white;
+
+              display: -webkit-box;
+              -webkit-box-orient: vertical;
+              -webkit-line-clamp: 3;
+              overflow: hidden;
+              p{
+                &:last-child{
+                  margin-top: 10px;
+                  font-size: 0.8rem;
+                }
+              }
+              .heart{
+                position: absolute;
+                right: 0;
+                top: 0;
+                background-color: transparent;
+                border: none;
+                font-size: 1.4rem;
+                color: $middle-grey;
+                &.active{
+                  color: pink;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media all and (min-width:769px){
+  .contents02_outer {
+      .contents_title {
+      }
+      .contents02_box_outer {
+        position: relative;
+        padding: 20px 0;
+        width: 100%;
+        overflow: hidden;
+        display: block;
+        .slick-arrow {
+          position: absolute;
+          z-index: 100;
+        }
+        .slick-prev,
+        .slick-next {
+          display: block !important;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 40px;
+          height: 40px;
+          z-index: 100;
+          border: none;
+          background: transparent;
+          cursor: pointer;
+        }
+        .slick-prev {
+          left: 0;
+        }
+        .slick-next {
+          right: 0;
+        }
+        // Slick 기본 화살표 제거
+        .slick-prev::before,
+        .slick-next::before {
+          content: none !important;
+          display: none !important;
+        }
+
+        // Font Awesome 아이콘
+        .slick-prev i,
+        .slick-next i {
+          display: block;
+          font-size: 32px;
+          color: $sub-color01;
+          font-weight: 900;
+          transition: all 0.3s ease;
+        }
+        // hover
+        .slick-prev:hover i,
+        .slick-next:hover i {
+          color: $point-color;
+        }
+        .slick-list {
+          overflow: visible;
+        }
+        .contents02_box {
+          position: relative;
+          margin-left: 20px;
+          margin-right: 20px;
+          transform: scale(0.9);
+          opacity: 0.7;
+          transition: transform 0.5s ease, opacity 0.5s ease;
+          &.slick-center {
+            transform: scale(1.05);
+            opacity: 1;
+          }
+          img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 20px;
+          }
+          .artist_box {
+            width: 20%;
+            position: absolute;
+            top: 2%;
+            right: 2%;
+            img {
+              width: 70%;
+              height: 70%;
+              border-radius: 50%;
+              margin: 0 auto;
+            }
+            p {
+              font-size: 0.8rem;
+              color: $point-color;
+              text-align: center;
+              background-color: rgba(255, 255, 255, 0.7);
+              border-radius: 20px;
+              padding: 3px 0;
+              margin-top: 5px;
+            }
+          }
+          .text_box {
+            .linear_gradient1 {
+              width: 100%;
+              height: 50%;
+              background: linear-gradient(
+                rgba(112, 119, 50, 0),
+                rgba(112, 119, 50, 1)
+              );
+              border-radius: 0 0 20px 20px;
+              position: absolute;
+              bottom: 0;
+              .text {
+                position: absolute;
+                bottom: 0;
+                margin: 20px;
+                color: $white;
+    
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 3;
+                overflow: hidden;
+                p{
+                  &:last-child{
+                    font-size: 0.8rem;
+                  }
+                }
+              }
+              .heart{
+                position: absolute;
+                right: 0;
+                top: 0;
+                background-color: transparent;
+                border: none;
+                font-size: 1.4rem;
+                color: $middle-grey;
+                &.active{
+                  color: pink;
+                }
+                &:hover{
+                  color: pink;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+/*************** festival_outer ****************/
+.contents03_outer{
+  .contents03{
+    .contents_title{}
+    .festival_list{
+      background-color: $sub-color02;
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      width: calc(100% - 20px);
+      height: 800px;
+      .festival{
+        position: relative;
+        .contents03_bg{
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0,0,0,0.5);
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 100;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .text{
+            height: 30px;
+            p{
+              text-align: center;
+              line-height: 30px;
+              border-radius: 20px;
+              padding: 5px 10px;
+              font-weight: bold;
+              opacity: 0.7;
+            }
+            .festival_text01{
+              background-color: #c7dcf8;
+              color: #6473b6;
+            }
+            .festival_text02{
+              background-color: #acd0e0;
+              color: #2c7bc5;
+            }
+            .festival_text03{
+              background-color: #f5b9eb;
+              color: #bb589a;
+            }
+            .festival_text04{
+              background-color: #d2b6f1;
+              color: #8141ca;
+            }
+            .festival_text05{
+              background-color: #f7d6b0;
+              color: #ac6c0d;
+            }
+          }
+        }
+        border-radius: 20px;
+        flex: 1;
+        transition: 0.5s;
+        overflow: hidden;
+        margin-bottom: 5px;
+        &:last-child{
+          margin-bottom: 0;
+        }
+        img,
+        picture{
+          width: 100%; height: 100%;
+        }
+      }
+      .active{
+        flex: 4;
+        .contents03_bg{
+          display: none;
+        }
+      }
+    }
+  }
+}
+/*************** map_outer ****************/
+.contents04_outer{
+  position: relative;
+  #course_tab01,
+  #course_tab02,
+  #course_tab03,
+  #course_tab04{
+  display: none;
+  }
+  #course_tab01:checked ~ .tab_outer .course_tab01,
+  #course_tab02:checked ~ .tab_outer .course_tab02,
+  #course_tab03:checked ~ .tab_outer .course_tab03,
+  #course_tab04:checked ~ .tab_outer .course_tab04{
+  @include buttonActive();
+  }
+  #course_tab01:checked ~ .contents04_box01,
+  #course_tab02:checked ~ .contents04_box02,
+  #course_tab03:checked ~ .contents04_box03,
+  #course_tab04:checked ~ .contents04_box04{
+  @include flex();
+  }
+  .contents04_box01,
+  .contents04_box02,
+  .contents04_box03,
+  .contents04_box04{
+    display: none;
+  }
+  .popup_bg{
+    background-color: rgba(0,0,0,0.3);
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 100;
+  }
+  .contents04{
+    position: relative;
+    .contents04_box01{ 
+      .facilities_toilet_open{
+        top: 15%; left: 2%;
+      }
+      .facilities_parking_open{
+        top: 40%; left: 24%;
+      }
+    }
+    .contents04_box02{ 
+      .facilities_toilet_open{
+        top: 18%; left: 3%;
+      }
+      .facilities_parking_open{
+        top: 31%; left: 17%;
+      }
+    }
+    .contents04_box03{ 
+      .facilities_toilet_open{
+        top: 26%; left: 69%;
+      }
+      .facilities_parking_open{
+       top: 2%; left: 78%;
+      }
+    }
+    .contents04_box04{ 
+      .facilities_toilet_open{
+        top: 30%; left: 63%;
+      }
+      .facilities_parking_open{
+        top: 8%; left: 81%;
+      }
+    }
+    >div{
+      margin: 10px;
+      position: relative;
+      .facilities_toilet_popup,
+      .facilities_parking_popup{
+        position: fixed;
+        z-index: 101;
+        position: absolute;
+        width: 70%;
+        top: -50px;
+        left: calc((100% - 70%)/2);
+        display: none;
+        border-radius: 20px;
+        overflow: hidden;
+        background-color: $light-grey;
+        img{}
+        i{
+          position: absolute;
+          top: 10px; right: 10px;
+        }
+        .facilities_text_box{
+          padding: 10px;
+          background-color: $white;
+          .facilities_title{
+            color: $point-color;
+            text-align: left;
+            font-weight: bold;
+           }
+          .facilities_detail{
+            @include flex-between();
+            .facilities_detail_left{
+              p{text-align: left;}
+            }
+            .facilities_detail_right{
+              text-align: right;
+              p{}
+            }
+          }
+        }
+      }
+      >picture{
+      overflow: hidden;
+      position: relative;
+      border-radius: 20px;
+      border: 1px solid $point-color; box-sizing: border-box;
+      .facilities_toilet_open,
+      .facilities_parking_open{
+        position: absolute;
+        font-size: 1.2rem;
+        border-radius: 50%;
+        border: none;
+        padding: 4px;
+        background-color: $point-color;
+        color: $white;
+      }
+      }
+    }
+    .contents_title{}
+    .tab_outer{
+      margin: 20px;
+      label{
+        padding: 5px 10px;
+        margin-right: 5px;
+      }
+    }
+  }
+}
+/*************** sns_outer ****************/
+.contents05_outer{
+  margin: 0 10px;
+  .contents_title{}
+  .contents05_box{
+    width: 100%; height: 330px;
+    display: flex;
+    overflow: hidden;
+    ul{
+      display: flex;
+      gap: 10px;
+      width: max-content;
+      animation: slide01 20s linear infinite;
+      @keyframes slide01 {
+        from{transform: translateX(0);}
+        to{transform: translateX(-50%);}
+      }
+      &:hover,
+      &.paused{
+        animation-play-state: paused;
+      }
+      li{
+        width: 180px;
+        height:330px;
+        flex-shrink: 0;
+        img{
+          width: 100%; height: 330px;
+          border-radius: 25px;
+        }
+      }
+    }
+  }
+}
+/*************** metapo_outer *************/
+  @media all and (min-width : 769px){
+    .contents01_box01,
+    .contents01_box02,
+    .contents01_box03,
+    .contents01_box04{
+      display: none;
+      background-color: $sub-color02;
+      overflow: hidden;
+      position: relative;
+      .heart{
+        position: absolute;
+        top: 15px; right: 15px;
+        background-color: transparent;
+        border: none;
+        font-size: 1.4rem;
+        color: $middle-grey;
+        z-index: 11;
+        cursor: pointer;
+        &.active{
+          color: pink;
+        }
+        &:hover{
+          color: pink;
+        }
+      }
+    }
+  }

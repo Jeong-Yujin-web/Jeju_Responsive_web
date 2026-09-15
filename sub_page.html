@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0, user-scalable=no">
+  <!-- icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <!-- css -->
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/sub.css">
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapiscom">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.css">
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/ScrollToPlugin.min.js"></script>
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!-- Slick CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+  <!-- bxSlider JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.js"></script>
+  <!-- Slick JS 추가 -->
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <!-- JS -->
+  <script type="module" src="./js/sub.js" defer></script>
+  <title>Jeju_Renewal</title>
+  <style>
+   *{margin: 0; padding: 0;}
+   li{list-style: none;}
+   a{color: black; text-decoration: none;}
+   /********* tablet ver ********/
+    @media all and (min-width : 601px){
+      .festival_outer .festival_container .festival_box01 > div img, .festival_outer .festival_container .festival_box02 > div img{
+        object-fit: cover;
+        aspect-ratio: 3/4;
+      }
+      .festival_outer .festival_container .festival_box01,
+      .festival_outer .festival_container .festival_box02{
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .festival_outer .festival_container .festival_box01 .festival01,
+      .festival_outer .festival_container .festival_box02 .festival01{
+        grid-column: 1/2;
+        grid-row: 1/2;
+      }
+      .festival_outer .festival_container .festival_box01 .festival02,
+      .festival_outer .festival_container .festival_box02 .festival02{
+        grid-column: 2/3;
+        grid-row: 1/2;
+      }
+      .festival_outer .festival_container .festival_box01 .festival03,
+      .festival_outer .festival_container .festival_box02 .festival03{
+        grid-column: 3/4;
+        grid-row: 1/2;
+      }
+      .festival_outer .festival_container .festival_box01 .festival04,
+      .festival_outer .festival_container .festival_box02 .festival04{
+        grid-column: 4/5;
+        grid-row: 1/2;
+      }
+    }
+   /********* pc01 ver ********/
+   /****************** header ******************/
+    @media all and (min-width : 769px){    
+    .header_outer{}
+    .header_outer .header{
+      justify-content: flex-start;
+      font-size: 1.2rem;
+    }
+    .header_outer .header .gnb_outer_pc{
+      display: block;
+      flex: 3;
+    }
+    .header_outer .header .gnb_outer_pc ul{
+      display: flex;
+      justify-content: space-evenly;
+    }
+    .header_outer .header .btn button{
+      font-size: 1.4rem;
+    }
+    .header_outer .header .btn .search_box{
+      display: block;
+      border: 1px solid #666; box-sizing: border-box;
+      border-radius:30px;
+      height: 40px;
+    }
+    .header_outer .header .btn .search_box:focus-within{
+      color: #468432;
+      border-color: #468432;
+    }
+    .header_outer .header .btn>div i{
+      line-height: 40px;
+      margin-right: 10px;
+    }
+    .header_outer .header .btn>div input{
+      border: none;
+    }
+    .header_outer .header .btn button:nth-child(5){
+      display: block;
+      padding-bottom: 6px;
+    }
+    .header_outer .header .btn>button:nth-child(3){
+      display: none;
+     }
+    .header_outer .header .btn button:nth-child(4){
+      display: none;
+    }
+    .header_outer .header .btn button:nth-child(1),
+    .header_outer .header .btn button:nth-child(5),
+    .header_outer .header .btn button:nth-child(6),
+    .header_outer .header .btn button:nth-child(7){
+      display: block;
+    }
+    .gnb_outer_pc{
+      display: flex;
+    }
+    .wing_outer_mobile{
+      display: none;
+    }
+    /****************** outer ******************/
+    .mb{
+      margin-bottom: 60px;
+    }
+    .aside .quick_btn{
+      width: 50px; height: 50px;
+      font-size: 1.2rem;
+      line-height: 50px;
+    }
+    .festival_outer .option_box_outer .option_box{
+      padding: 30px;
+      width: 80%;
+      margin: 0 auto;
+    }
+    .festival_outer .option_box_outer .option_box .option_box01 button,
+    .festival_outer .option_box_outer .option_box .option_box02 button,
+    .festival_outer .option_box_outer .option_box .option_box03 button{
+      padding: 5px 20px;
+    }
+    .festival_outer .option_box_outer .option_box .option_box03 button{
+      margin-bottom: 0;
+    }
+    /****************** outer ******************/
+  }
+   /********* pc02 ver ********/
+    @media all and (min-width : 1245px){
+    .festival_outer,
+    .bread_crumb_outer,
+    .title,
+    .header_outer .header,
+    .footer_outer .footer .footer_top{
+      width: 1245px;
+      margin: 0 auto;
+    }
+    .header_outer .gnb_menu_full_outer .gnb_menu_full ul{
+      width: 11%;
+      margin-left: 4px;
+    }
+    .footer_bottom>div,
+    .footer_copyright p{
+      width: 1245px;
+      margin: 0 auto;
+    }
+  }
+  </style>
+
+</head>
+<body>  
+  <div class="header_outer">
+    <div class="gnb_menu_full_outer">
+      <div class="gnb_menu_full">
+        <ul class="menu_full02">
+          <li><a href="./sub_page.html">지금 제주는</a></li>
+          <li><a href="./sub_page.html">제주 관광지</a></li>
+          <li><a href="./sub_page.html">음식</a></li>
+          <li><a href="./sub_page.html">숙박</a></li>
+          <li><a href="./sub_page.html">쇼핑</a></li>
+        </ul>
+        <ul class="menu_full03">
+          <li><a href="./sub_page.html">추천 여행지</a></li>
+          <li><a href="./sub_page.html">추천 코스</a></li>
+        </ul>
+        <ul class="menu_full04">
+          <li><a href="./sub_page.html">Artist-pick</a></li>
+          <li><a href="./sub_page.html">드라마 촬영지</a></li>
+        </ul>
+        <ul class="menu_full05">
+          <li><a href="./sub_page.html">오름길 소개</a></li>
+          <li><a href="./sub_page.html">코스 안내</a></li>
+        </ul>
+        <ul class="menu_full06">
+          <li><a href="./sub_page.html">여행소식</a></li>
+          <li><a href="./sub_page.html">공지</a></li>
+          <li><a href="./sub_page.html">이벤트</a></li>
+          <li><a href="./sub_page.html">관광 안내소</a></li>
+          <li><a href="./sub_page.html">교통 정보</a></li>
+        </ul>
+        <div class="gnb_menu_banner">
+          <ul class="gnb_menu_img">
+            <li><img src="./images/PC버전/banner/gnb_banner01.jfif" alt=""></li>
+            <li><img src="./images/PC버전/banner/gnb_banner02.png" alt=""></li>
+            <li><img src="./images/PC버전/banner/gnb_banner03.jfif" alt=""></li>
+            <li><img src="./images/PC버전/banner/gnb_banner04.jfif" alt=""></li>
+            <li><img src="./images/PC버전/banner/gnb_banner05.jfif" alt=""></li>
+            <li><img src="./images/PC버전/banner/gnb_banner06.jfif" alt=""></li>
+            <li><img src="./images/PC버전/banner/gnb_banner07.jfif" alt=""></li>
+         </ul>
+          <div class="slider_btn">
+            <button id="slider-prev"></button>
+            <button id="slider-next"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="search_popup_outer">
+      <div class="search_popup">
+        <button type="button" class="search_close"><i class="fa-solid fa-xmark"></i></button>
+        <div class="search_popup_top">
+          <div class="search_popup_search">
+            <input type="search" placeholder="검색어를 입력해주세요">
+            <button type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </div>
+        </div>
+        <div class="search_popup_bottom">
+          <p class="search_popup_subtitle">인기 검색어</p>
+          <ul class="wrap">
+            <li>
+              <button type="button" class="btn_search_delete">
+              <a href="./sub_page.html">#유네스코
+                <i class="fa-solid fa-xmark"></i>
+              </a>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="btn_search_delete">
+              <a href="./sub_page.html">#액티비티
+                <i class="fa-solid fa-xmark"></i>
+              </a>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="btn_search_delete">
+              <a href="./sub_page.html">#반려동물
+                <i class="fa-solid fa-xmark"></i>
+              </a>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="btn_search_delete">
+              <a href="./sub_page.html">#비오는 날
+                <i class="fa-solid fa-xmark"></i>
+              </a>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="btn_search_delete">
+              <a href="./sub_page.html">#오름
+                <i class="fa-solid fa-xmark"></i>
+              </a>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <header class="header">
+      <div class="logo">
+        <a href="./index.html"><img src="./images/Mobile버전/logo_mobile.jpg" alt="로고이미지"></a>
+      </div>
+      <nav class="gnb_outer_pc">
+        <ul class="gnb_menu">
+          <li>추천</li>
+          <li>K-PICK</li>
+          <li>놀멍</li>
+          <li>오름길</li>
+          <li>소식통</li>
+        </ul>
+      </nav>
+      <div class="btn">
+        <div class="search_box">
+          <input type="search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <button type="button" class="weather_btn"><img src="./images/Mobile버전/weather_popup/popup_weather01_mobile.png" alt="날씨이미지">27&deg;</button>
+        <button type="button" class="search_btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <button type="button" id="menu_btn"><i class="fa-solid fa-bars"></i></button>
+        <button type="button" class="font_size_btn">가</button>
+        <button type="button" id="user_btn"><a href="./login.html"><i class="fa-regular fa-user"></i></a></button>
+        <button type="button" class="language_btn"><i class="fa-solid fa-globe"></i></button>
+      </div>
+    </header>
+    <div class="wing_outer_mobile">
+      <div class="wing_banner">
+        <div class="wing_header">
+          <div class="logo">
+            <img src="./images/Mobile버전/logo_mobile.jpg" alt="로고 이미지">
+            <button type="button" class="close"><i class="fa-solid fa-xmark"></i></button>
+          </div>
+          <div class="user_btn">
+            <button type="button"><a href="./login.html">로그인</a></button>
+            <button type="button">마이페이지</button>
+            <select>KOR
+            <option>KOR</option>
+            <option>ENG</option>
+            <option>CHI</option>
+            </select>
+          </div>
+        </div>
+        <input type="checkbox" id="chk01">
+        <input type="checkbox" id="chk02">
+        <input type="checkbox" id="chk03">
+        <input type="checkbox" id="chk04">
+        <input type="checkbox" id="chk05">
+        <div class="label_box01">
+          <label for="chk01">제주놀멍<i class="fa-solid fa-angle-down"></i></label>
+        </div>
+        <ul class="wing_box01">
+          <li><a href="./sub_page.html">지금 제주는</a></li>
+          <li><a href="./sub_page.html">제주 관광지</a></li>
+          <li><a href="./sub_page.html">음식</a></li>
+          <li><a href="./sub_page.html">숙박</a></li>
+          <li><a href="./sub_page.html">쇼핑</a></li>
+        </ul>
+        <div class="label_box02">
+          <label for="chk02">AI추천<i class="fa-solid fa-angle-down"></i></label>
+        </div>
+        <ul class="wing_box02">
+          <li><a href="./sub_page.html">추천 여행지</a></li>
+          <li><a href="./sub_page.html">추천 코스</a></li>
+        </ul>
+        <div class="label_box03">
+          <label for="chk03">K-Pick<i class="fa-solid fa-angle-down"></i></label>
+        </div>
+        <ul class="wing_box03">
+          <li><a href="./sub_page.html">Artist-pick</a></li>
+          <li><a href="./sub_page.html">드라마 촬영지</a></li>
+        </ul>
+        <div class="label_box04">
+          <label for="chk04">오름길<i class="fa-solid fa-angle-down"></i></label>
+        </div>
+        <ul class="wing_box04">
+          <li><a href="./sub_page.html">오름길 소개</a></li>
+          <li><a href="./sub_page.html">코스 안내</a></li>
+        </ul>
+        <div class="label_box05">
+          <label for="chk05">제주소식통<i class="fa-solid fa-angle-down"></i></label>
+        </div>
+        <ul class="wing_box05">
+          <li><a href="./sub_page.html">여행 소식</a></li>
+          <li><a href="./sub_page.html">공지</a></li>
+          <li><a href="./sub_page.html">이벤트</a></li>
+          <li><a href="./sub_page.html">관광안내소</a></li>
+          <li><a href="./sub_page.html">교통 정보</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <nav class="bread_crumb_outer">
+    <ul class="bread_crumb">
+      <li><a href="./index.html"><i class="fa-regular fa-house"></i></a></li>
+      <li>
+        <button type="button" class="bread_crumb_btn">제주 놀멍</button>
+        <ul class="bread_crumb_box">
+          <li><a href="./sub_page.html">지금 제주는</a></li>
+          <li><a href="./sub_page.html">제주 관광지</a></li>
+          <li><a href="./sub_page.html">음식</a></li>
+          <li><a href="./sub_page.html">숙박</a></li>
+          <li><a href="./sub_page.html">맛집</a></li>
+        </ul>
+      </li>
+      <li><i class="fa-solid fa-angle-right"></i></li>
+      <li><a href="./sub_page.html">지금 제주는</a></li>
+    </ul>
+  </nav>
+  <div class="title">
+    <p>지금 제주는</p>
+  </div>
+  <div class="date_title">
+    <p>2026년 7월</p>
+  </div>
+  <section class="festival_outer">
+    <input type="radio" name="month" id="month_01">
+    <input type="radio" name="month" id="month_02">
+    <input type="radio" name="month" id="month_03" checked>
+    <input type="radio" name="month" id="month_04">
+    <input type="radio" name="month" id="month_05">
+    <div class="festival_label_box">
+      <button type="button" for="prev" class="prev"><i class="fa-solid fa-angle-left"></i></button>
+      <label for="month_01" class="may">5월</label>
+      <label for="month_02" class="june">6월</label>
+      <label for="month_03" class="july">7월</label>
+      <label for="month_04" class="aug">8월</label>
+      <label for="month_05" class="oct">9월</label>
+      <button type="button" for="next" class="next"><i class="fa-solid fa-angle-right"></i></button>
+    </div>
+    <input type="checkbox" id="option">
+    <label class="option" for="option">
+      <p>필터</p><img src="./images/Mobile버전/filter_mobile.png" alt="옵션이미지">
+    </label>
+    <div class="option_box_outer">
+      <div class="option_box">
+        <label for="option" class="option_box_close"><i class="fa-solid fa-xmark"></i></label>
+        <div class="option_box01">
+          <div class="option_left">
+            <p>기간</p>
+          </div>
+          <div class="option_right">
+            <button type="button">전체</button>
+            <button type="button">진행중</button>
+            <button type="button">예정</button>
+          </div>
+        </div>
+        <div class="option_box02">
+          <div class="option_left">
+            <p>테마</p>
+          </div>
+          <div class="option_right">
+            <button type="button">전체</button>
+            <button type="button">장터</button>
+            <button type="button">꽃</button>
+            <button type="button">산</button>
+            <button type="button">물</button>
+            <button type="button">소리</button>
+          </div>
+        </div>
+        <div class="option_box03">
+          <div class="option_left">
+            <p>가격</p>
+          </div>
+          <div class="option_right">
+            <button type="button">전체</button>
+            <button type="button">~만원 미만</button>
+            <button type="button">1만원~3만원 미만</button>
+            <button type="button">3만원~5만원 미만</button>
+            <button type="button">5만원 이상</button>
+          </div>
+        </div>
+      </div>
+      <div class="option_btn">
+        <button type="reset" class="option_reset">초기화</button>
+        <button type="submit" class="option_submit">적용</button>
+      </div>
+    </div>
+    <div class="festival_container">
+      <div class="festival_box01">
+        <div class="festival01">
+          <img src="./images/PC버전/지금 제주는_sub/festivities_img01_pc_sub.jpg" alt="">
+          <div class="festival_text_box">
+            <p class="festival_info_title">문화가 있는 날</p>
+            <p class="festival_info">기간 : 2026.05.01 ~ 2026.06.11</p>
+            <p>장소 : 제주시 제주읍 제주</p>
+            <p>
+            행사 참여 : 달집 태우기, 횃불 행진 관람, 문화 공연 관람</p>
+          </div>
+          <div class="text_btn">
+            <button type="button" class="reservation">예매하기</button>
+            <button type="button" class="heart"><i class="fa-solid fa-heart"></i></button>
+          </div>
+        </div>
+        <div class="festival02">
+          <img src="./images/PC버전/지금 제주는_sub/festivities_img02_pc_sub.jpg" alt="">
+          <div class="festival_text_box">
+            <p class="festival_info_title">GRAVITY QUEST</p>
+            <p class="festival_info">기간 : 2026.05.03 ~ 2026.06.01</p>
+            <p>장소 : 제주시 제주읍 제주</p>
+            <p>
+            행사 참여 : 달집 태우기, 횃불 행진 관람, 문화 공연 관람</p>
+          </div>
+          <div class="text_btn">
+            <button type="button" class="reservation">예매하기</button>
+            <button type="button" class="heart"><i class="fa-solid fa-heart"></i></button>
+          </div>
+        </div>
+        <div class="festival03">
+          <img src="./images/PC버전/지금 제주는_sub/festivities_img03_pc_sub.jpg" alt="">
+          <div class="festival_text_box">
+            <p class="festival_info_title">서귀포 원도심 페스티벌</p>
+            <p class="festival_info">기간 : 2026.05.05 ~ 2026.06.04</p>
+            <p>장소 : 제주시 제주읍 제주</p>
+            <p>
+            행사 참여 : 달집 태우기, 횃불 행진 관람, 문화 공연 관람</p>
+          </div>
+          <div class="text_btn">
+            <button type="button" class="reservation">예매하기</button>
+            <button type="button" class="heart"><i class="fa-solid fa-heart"></i></button>
+          </div>
+        </div>
+        <div class="festival04">
+          <img src="./images/PC버전/지금 제주는_sub/festivities_img13_pc_sub.jpg" alt="">
+          <div class="festival_text_box">
+            <p class="festival_info_title">고래의 아이</p>
+            <p class="festival_info">기간 : 2026.05.23 ~ 2026.07.23</p>
+            <p>장소 : 제주시 제주읍 제주</p>
+            <p>
+              행사 참여 : 달집 태우기, 횃불 행진 관람, 문화 공연 관람</p>
+          </div>
+          <div class="text_btn">
+            <button type="button" class="reservation">예매하기</button>
+            <button type="button" class="heart"><i class="fa-solid fa-heart"></i></button>
+          </div>
+        </div>
+      </div>
+      <input type="checkbox" id="festival_more01">
+      <div class="festival_more01">
+        <label for="festival_more01">더보기</label>
+      </div>
+      <div class="festival_box02 mb">
+        <div class="festival01">
+          <img src="./images/PC버전/지금 제주는_sub/festivities_img05_pc_sub.jpg" alt="">
+          <div class="festival_text_box">
+            <p class="festival_info_title">사라봉 굿나잇</p>
+            <p class="festival_info">기간 : 2026.05.01 ~ 2026.06.11</p>
+            <p>장소 : 제주시 제주읍 제주</p>
+            <p>
+              행사 참여 : 달집 태우기, 횃불 행진 관람, 문화 공연 관람</p>
+          </div>
+          <div class="text_btn">
+            <button type="button" class="reservation">예매하기</button>
+            <button type="button" class="heart"><i class="fa-solid fa-heart"></i></button>
+          </div>
+        </div>
+        <div class="festival02">
+          <img src="./images/PC버전/지금 제주는_sub/festivities_img06_pc_sub.jpg" alt="">
+          <div class="festival_text_box">
+            <p class="festival_info_title">금토금토새연쇼</p>
+            <p class="festival_info">기간 : 2026.05.03 ~ 2026.06.01</p>
+            <p>장소 : 제주시 제주읍 제주</p>
+            <p>
+              행사 참여 : 달집 태우기, 횃불 행진 관람, 문화 공연 관람</p>
+            </div>
+            <div class="text_btn">
+              <button type="button" class="reservation">예매하기</button>
+              <button type="button" class="heart"><i class="fa-solid fa-heart"></i></button>
+            </div>
+          </div>
+        <div class="festival03">
+          <img src="./images/PC버전/지금 제주는_sub/festivities_img07_pc_sub.jpg" alt="">
+          <div class="festival_text_box">
+            <p class="festival_info_title">화산암반수 원정대</p>
+            <p class="festival_info">기간 : 2026.05.05 ~ 2026.06.04</p>
+            <p>장소 : 제주시 제주읍 제주</p>
+            <p>행사 참여 : 달집 태우기, 횃불 행진 관람, 문화 공연 관람</p>
+          </div>
+          <div class="text_btn">
+            <button type="button" class="reservation">예매하기</button>
+            <button type="button" class="heart"><i class="fa-solid fa-heart"></i></button>
+          </div>
+        </div>
+        <div class="festival04">
+          <img src="./images/PC버전/지금 제주는_sub/festivities_img10_pc_sub.jpg" alt="">
+          <div class="festival_text_box">
+            <p class="festival_info_title">K-Dream DANCE Festa</p>
+            <p class="festival_info">기간 : 2026.05.23 ~ 2026.07.23</p>
+            <p>장소 : 제주시 제주읍 제주</p>
+            <p>
+              행사 참여 : 달집 태우기, 횃불 행진 관람, 문화 공연 관람</p>
+          </div>
+          <div class="text_btn">
+            <button type="button" class="reservation">예매하기</button>
+            <button type="button" class="heart"><i class="fa-solid fa-heart"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="footer_outer">
+    <footer class="footer">
+      <div class="footer_top">
+        <ul>
+          <li>
+            <img src="./images/footer/footer01.jpg" alt="푸터이미지01">
+          </li>
+          <li>
+            <img src="./images/footer/footer02.jpg" alt="푸터이미지02">
+          </li>
+          <li>
+            <img src="./images/footer/footer03.jpg" alt="푸터이미지03">
+          </li>
+          <li>
+            <img src="./images/footer/footer04.jpg" alt="푸터이미지04">
+          </li>
+          <li>
+            <img src="./images/footer/footer05.jpg" alt="푸터이미지05">
+          </li>
+          <li>
+            <img src="./images/footer/footer06.jpg" alt="푸터이미지06">
+          </li>
+          <li>
+            <img src="./images/footer/footer07.jpg" alt="푸터이미지07">
+          </li>
+          <li>
+            <img src="./images/footer/footer08.jpg" alt="푸터이미지08">
+          </li>
+          <li>
+            <img src="./images/footer/footer09.jpg" alt="푸터이미지09">
+          </li>
+          <li>
+            <img src="./images/footer/footer01.jpg" alt="푸터이미지01">
+          </li>
+          <li>
+            <img src="./images/footer/footer02.jpg" alt="푸터이미지02">
+          </li>
+          <li>
+            <img src="./images/footer/footer03.jpg" alt="푸터이미지03">
+          </li>
+          <li>
+            <img src="./images/footer/footer04.jpg" alt="푸터이미지04">
+          </li>
+          <li>
+            <img src="./images/footer/footer05.jpg" alt="푸터이미지05">
+          </li>
+          <li>
+            <img src="./images/footer/footer06.jpg" alt="푸터이미지06">
+          </li>
+          <li>
+            <img src="./images/footer/footer07.jpg" alt="푸터이미지07">
+          </li>
+          <li>
+            <img src="./images/footer/footer08.jpg" alt="푸터이미지08">
+          </li>
+        </ul>
+      </div>
+      <div class="footer_bottom">
+        <div class="footer_bottom01">
+          <div class="footer_sns">
+            <a href="https://www.instagram.com/visitjeju.kr/?hl=ko"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.youtube.com/c/visitjeju"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.facebook.com/visitjeju.kr/?locale=ko_KR"><i class="fa-brands fa-facebook-f"></i></a>
+          </div>
+          <div class="footer_center_number">
+            <p>고객 센터</p>
+            <p>064-740-6000</p>
+          </div>
+        </div>
+        <div class="footer_bottom02">
+          <div class="footer_logo">
+            <img src="./images/PC버전/footer/footer_logo01.png" alt="푸터 로고 이미지01">
+            <img src="./images/PC버전/footer/footer_logo02.png" alt="푸터 로고 이미지02">
+          </div>
+          <div class="footer_center_number">
+            <p>(63122) 제주특별자치도 제주시 선덕로 23(연동) 제주웰컴센터</p>
+            <p>관광문의 : 제주관광공사 Tel : 064-740-6000~1  ㅣ   FAX : 64-740-6090</p>
+            <p>사업자등록번호 : 616-82-21432</p>
+            <p>관광불편신고 : 제주관광불편신고센터(1533-0082)</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer_copyright">
+        <p>Copyright&copy;Visit_Jeju</p>
+      </div>
+    </footer>
+  </div>
+  <div class="aside">
+    <div class="quick_btn">
+      <div class="btn_top">Top</div>
+      <!-- <div class="bottom"></div> -->
+    </div>
+  </div>
+</body>
+</html>

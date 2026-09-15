@@ -1,0 +1,397 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+html {
+  font-size: 16px;
+}
+
+/***************** common ******************/
+body {
+  color: #333;
+}
+
+.contents_title {
+  margin: 0 20px 10px 10px;
+  width: calc(100% - 20px);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+}
+.contents_title p {
+  font-size: 1.2rem;
+}
+.contents_title .more a {
+  font-size: 0.8rem;
+  color: #999;
+}
+
+.mb {
+  margin-bottom: 30px;
+}
+
+/********************** header ***********************/
+/******************** bread_crumb ********************/
+.bread_crumb_outer .bread_crumb {
+  display: flex;
+  font-size: 0.8rem;
+  margin: 10px 5px;
+}
+.bread_crumb_outer .bread_crumb li {
+  margin-right: 10px;
+  position: relative;
+}
+.bread_crumb_outer .bread_crumb li button {
+  background-color: white;
+  font-size: 0.8rem;
+  border: none;
+}
+.bread_crumb_outer .bread_crumb li ul.open {
+  margin-top: 5px;
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0px;
+}
+.bread_crumb_outer .bread_crumb li ul {
+  display: none;
+  width: 84px;
+  background-color: white;
+  border: 1px solid #eee;
+}
+.bread_crumb_outer .bread_crumb li ul li {
+  padding: 5px 0;
+  margin-left: 10px;
+}
+.title {
+  margin: 20px 10px;
+}
+.date_title {
+  text-align: center;
+}
+.festival_outer .festival_label_box {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+  padding: 5px 0;
+  margin-bottom: 15px;
+}
+.festival_outer .festival_label_box button {
+  background-color: white;
+  font-size: 0.8rem;
+  border: none;
+}
+.festival_outer .festival_label_box label {
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+.festival_outer {
+  margin: 0 10px;
+}
+.festival_outer #month_01:checked ~ .festival_box01,
+.festival_outer #month_02:checked ~ .festival_box02,
+.festival_outer #month_03:checked ~ .festival_box03,
+.festival_outer #month_04:checked ~ .festival_box04,
+.festival_outer #month_05:checked ~ .festival_box05 {
+  display: block;
+}
+.festival_outer #month_01:checked ~ .festival_box01,
+.festival_outer #month_02:checked ~ .festival_box02,
+.festival_outer #month_03:checked ~ .festival_box03,
+.festival_outer #month_04:checked ~ .festival_box04,
+.festival_outer #month_05:checked ~ .festival_box05 {
+  display: block;
+}
+.festival_outer #month_01:checked ~ .festival_label_box .may,
+.festival_outer #month_02:checked ~ .festival_label_box .june,
+.festival_outer #month_03:checked ~ .festival_label_box .july,
+.festival_outer #month_04:checked ~ .festival_label_box .aug,
+.festival_outer #month_05:checked ~ .festival_label_box .oct {
+  background-color: #468432;
+  color: white;
+}
+.festival_outer #month_01,
+.festival_outer #month_02,
+.festival_outer #month_03,
+.festival_outer #month_04,
+.festival_outer #month_05 {
+  display: none;
+}
+.festival_outer .option {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  justify-content: right;
+  margin: 20px 0;
+}
+.festival_outer .option img {
+  width: 16px;
+  height: 18px;
+  margin-left: 5px;
+}
+.festival_outer #option {
+  display: none;
+}
+.festival_outer #option:checked ~ .option_box_outer {
+  display: block;
+}
+.festival_outer .option_box_outer {
+  display: none;
+}
+.festival_outer .option_box_outer .option_box > div {
+  display: flex;
+}
+.festival_outer .option_box_outer .option_box {
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 10px;
+  position: relative;
+}
+.festival_outer .option_box_outer .option_box .option_box_close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.festival_outer .option_box_outer .option_box .option_box_open {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.festival_outer .option_box_outer .option_box .option_box_open,
+.festival_outer .option_box_outer .option_box .option_box_close,
+.festival_outer .option_box_outer .option_box .festival01 button,
+.festival_outer .option_box_outer .option_box .festival02 button,
+.festival_outer .option_box_outer .option_box .festival03 button,
+.festival_outer .option_box_outer .option_box .festival04 button {
+  background-color: white;
+  font-size: 0.8rem;
+  border: none;
+}
+.festival_outer .option_box_outer .option_box .option_box01 button,
+.festival_outer .option_box_outer .option_box .option_box02 button,
+.festival_outer .option_box_outer .option_box .option_box03 button {
+  background-color: white;
+  font-size: 0.8rem;
+  border: 1px solid #eee;
+  box-sizing: border-box;
+  padding: 5px 11px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+.festival_outer .option_box_outer .option_box .option_box01 button.active,
+.festival_outer .option_box_outer .option_box .option_box02 button.active,
+.festival_outer .option_box_outer .option_box .option_box03 button.active {
+  background-color: #468432;
+  border: none;
+  border-radius: 20px;
+  box-sizing: border-box;
+  color: white;
+}
+.festival_outer .option_box_outer .option_box .option_box01 {
+  margin: 10px 0;
+}
+.festival_outer .option_box_outer .option_box .option_box01 .option_left {
+  width: 50px;
+}
+.festival_outer .option_box_outer .option_box .option_box01 .option_right {
+  width: calc(100% - 90px);
+}
+.festival_outer .option_box_outer .option_box .option_box02 {
+  margin-bottom: 10px;
+}
+.festival_outer .option_box_outer .option_box .option_box02 .option_left {
+  width: 50px;
+}
+.festival_outer .option_box_outer .option_box .option_box02 .option_right {
+  width: calc(100% - 90px);
+}
+.festival_outer .option_box_outer .option_box .option_box03 .option_left {
+  width: 50px;
+}
+.festival_outer .option_box_outer .option_box .option_box03 .option_right {
+  width: calc(100% - 90px);
+}
+.festival_outer .option_box_outer .option_box .option_box03 .option_right:nth-child(1) {
+  margin-bottom: 5px;
+}
+.festival_outer .option_box_outer .option_btn {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+.festival_outer .option_box_outer .option_btn button {
+  background-color: white;
+  border-radius: 20px;
+  border: 1px solid #468432;
+  box-sizing: border-box;
+  color: #468432;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  font-size: 0.8rem;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  padding: 5px 20px;
+  border-radius: 20px;
+}
+.festival_outer .option_box_outer .option_btn button:hover {
+  background-color: #468432;
+  border: none;
+  border-radius: 20px;
+  box-sizing: border-box;
+  color: white;
+}
+.festival_outer .option_box_outer .option_btn .option_reset {
+  margin-right: 10px;
+}
+.festival_outer .festival_container .festival_box01,
+.festival_outer .festival_container .festival_box02 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0 10px;
+}
+.festival_outer .festival_container .festival_box01 > div,
+.festival_outer .festival_container .festival_box02 > div {
+  margin-bottom: 30px;
+}
+.festival_outer .festival_container .festival_box01 > div img,
+.festival_outer .festival_container .festival_box02 > div img {
+  aspect-ratio: 1/1;
+  border-radius: 20px;
+}
+.festival_outer .festival_container .festival_box01 > div .festival_text_box,
+.festival_outer .festival_container .festival_box02 > div .festival_text_box {
+  margin: 10px 0;
+}
+.festival_outer .festival_container .festival_box01 > div .festival_text_box .festival_info_title,
+.festival_outer .festival_container .festival_box02 > div .festival_text_box .festival_info_title {
+  text-align: center;
+  font-weight: bold;
+}
+.festival_outer .festival_container .festival_box01 > div .festival_text_box .festival_info,
+.festival_outer .festival_container .festival_box02 > div .festival_text_box .festival_info {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #999;
+}
+.festival_outer .festival_container .festival_box01 > div .text_btn,
+.festival_outer .festival_container .festival_box02 > div .text_btn {
+  display: flex;
+}
+.festival_outer .festival_container .festival_box01 > div .text_btn button,
+.festival_outer .festival_container .festival_box02 > div .text_btn button {
+  background-color: white;
+  border-radius: 20px;
+  border: 1px solid #468432;
+  box-sizing: border-box;
+  color: #468432;
+  align-items: center;
+  text-align: center;
+  text-align: center;
+  border-radius: 10px;
+  height: 30px;
+  flex: 1;
+}
+.festival_outer .festival_container .festival_box01 > div .text_btn button:hover,
+.festival_outer .festival_container .festival_box02 > div .text_btn button:hover {
+  background-color: #468432;
+  border: none;
+  border-radius: 20px;
+  box-sizing: border-box;
+  color: white;
+  border-radius: 10px;
+}
+.festival_outer .festival_container .festival_box01 > div .heart,
+.festival_outer .festival_container .festival_box02 > div .heart {
+  margin-left: 10px;
+}
+.festival_outer .festival_container .festival_box01 .festival01,
+.festival_outer .festival_container .festival_box02 .festival01 {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.festival_outer .festival_container .festival_box01 .festival01 .festival_text_box,
+.festival_outer .festival_container .festival_box02 .festival01 .festival_text_box {
+  position: relative;
+}
+.festival_outer .festival_container .festival_box01 .festival02,
+.festival_outer .festival_container .festival_box02 .festival02 {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+.festival_outer .festival_container .festival_box01 .festival02 .festival_text_box,
+.festival_outer .festival_container .festival_box02 .festival02 .festival_text_box {
+  position: relative;
+}
+.festival_outer .festival_container .festival_box01 .festival03,
+.festival_outer .festival_container .festival_box02 .festival03 {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+.festival_outer .festival_container .festival_box01 .festival04,
+.festival_outer .festival_container .festival_box02 .festival04 {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+.festival_outer .festival_container .festival_box01 .festival04 .festival_text_box,
+.festival_outer .festival_container .festival_box02 .festival04 .festival_text_box {
+  position: relative;
+}
+.festival_outer .festival_container #festival_more01,
+.festival_outer .festival_container #festival_more02 {
+  display: none;
+}
+.festival_outer .festival_container .festival_more01,
+.festival_outer .festival_container .festival_more02 {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+.festival_outer .festival_container .festival_more01 label,
+.festival_outer .festival_container .festival_more02 label {
+  padding: 5px 20px;
+  background-color: white;
+  border-radius: 20px;
+  border: 1px solid #468432;
+  box-sizing: border-box;
+  color: #468432;
+  align-items: center;
+  text-align: center;
+}
+.festival_outer .festival_container .festival_box02,
+.festival_outer .festival_container .festival_box03 {
+  display: none;
+}
+.festival_outer .festival_container #festival_more01:checked ~ .festival_box02 {
+  display: grid;
+}
+.festival_outer .festival_container #festival_more01:checked ~ .festival_more01 {
+  display: none;
+}
+
+/******************** festival/grid *********************/
+/********************** footer ***********************//*# sourceMappingURL=sub.css.map */

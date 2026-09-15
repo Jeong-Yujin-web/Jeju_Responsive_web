@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="ko">
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEBE</title>
+    <link rel="icon" type="image/png" href="./images/R2.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/login.css">
+    <script type="module"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js">
+    </script>
+
+    <!------bxslider----->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.js"></script>
+    <script></script>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  <!-- Initialize Swiper -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+
+    });
+  </script>
+
+  <script>
+    $(function(){
+      //quick_top,bottom
+     
+      //gnb_drop_down
+      const btnOpen=$('.gnb .btn_open');
+      const btnClose=$('.gnb .btn_close');
+      const downMenu=$('.gnb .gnb_menu_full_outer');
+      btnOpen.click(function(){
+        downMenu.stop().animate({
+          height:420
+        }, 200);
+        btnOpen.css('display','none');
+        btnClose.css('display','block');
+      });
+      btnClose.click(function(){
+        downMenu.stop().animate({
+          height:0
+        }, 200);
+        btnOpen.css('display','block');
+        btnClose.css('display','none');
+      });
+
+      //popup_open/close
+      const shoppingOpen=$('.shopping_open');
+      const shoppingClose=$('.shopping_close');
+      const shoppingPopup=$('.shopping_popup_outer');
+
+      shoppingOpen.click(function(){
+        shoppingPopup.fadeIn(200);
+      });
+      shoppingClose.click(function(){
+        shoppingPopup.fadeOut(200);
+      });
+
+      const aiOpen=$('.ai_popup_open');
+      const aiClose=$('.ai_popup_close');
+      const aiPopup=$('.ai_popup_outer');
+
+      aiOpen.click(function(){
+        aiPopup.fadeIn(200);
+      });
+      aiClose.click(function(){
+        aiPopup.fadeOut(200);
+      });
+      
+      const searchOpen=$('.search_popup_open');
+      const searchClose=$('.search_popup_close');
+      const searchPopup=$('.search_popup_outer');
+      
+      searchOpen.click(function(){
+        searchPopup.fadeIn(200);
+      });
+      searchClose.click(function(){
+        searchPopup.fadeOut(200);
+      });
+    });
+    </script>
+  <style>
+/* --------------------------default_setting-------------------------- */
+  img{
+    display: block;
+  }
+  body{
+    font-family: "Alexandria", sans-serif;
+    color: #5B5A5D;
+  }
+  body a{
+    color: #5B5A5D;
+  }
+  .mb{
+    margin-bottom: 90px;
+  }
+/* -------- header ------- */
+  .header{
+    width: 100%;
+  }
+  .header_inner{
+    max-width: 1245px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  .header_utility,
+  .header_logo,
+  .header_usermenu{
+    display: flex;
+    align-items: center;
+    width: 230px;
+  }
+  .header_event{
+    width: 100%;height: 30px;
+    font-size: 12px;
+    background-color: skyblue;
+    text-align: center;
+    line-height: 30px;
+    transition: all ani01 infinite;
+  }
+  /* ani01. 위아래 흔들*/
+  .header_logo{
+  }
+  .header_logo img{
+    width: 100%; height: 100%;
+  }
+  .header_utility p{
+    color: #999;
+    margin-right: 20px;
+  }
+  .header_utility p:hover{
+    color: #5B5A5D;
+  }
+  .header_usermenu{
+    /* display: flex; */
+    justify-content: right;
+  }
+  .header_usermenu a{
+    color: #999;
+    margin-left: 20px;
+    font-size: 20px;
+  }
+  .header_usermenu a:hover{
+    color: #5B5A5D;
+  }
+  
+  .gnb{
+    width: 100%;
+    background-color: #FF7A80;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  .gnb_menu{
+    display: flex;
+    width: 100%;
+    max-width: 1245px;
+    margin: 0 auto;
+    line-height: 50px;
+  }
+  .gnb a i,
+  .gnb_menu_full a i{
+    display: block;
+    width: 50px; height: 50px;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    padding: 0 50px;
+    float: left;
+  }
+  .gnb_menu p{
+    flex-grow: 1;
+    text-align: center;
+    width: 100%;
+    float: left;
+  }
+  .gnb_menu p a:hover{
+    font-weight: bold;
+    color: #5B5A5D;
+  }
+  .gnb .btn_close{
+    display: none;
+  }
+  .gnb_menu p a{
+    color: white;
+  }
+  .gnb_menu_full_outer{
+    z-index: 1;
+    background-color: white;
+    width: 100%; height: 0px;
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+    position: absolute;
+  }
+  .gnb_menu_full{
+    overflow: hidden;
+    display: flex;
+    width: 100%;
+    max-width: 1245px;
+    margin: 0 auto;
+    background-color: white;
+  }
+  .gnb_menu_full ul{
+    width: 100%;
+    float: left;
+    padding: 10px 0;
+  }
+  .gnb_menu_full ul li{
+    width: 100%;
+    line-height: 50px;
+    text-align: center;
+  }
+  .gnb_menu_full ul li:hover{
+    text-decoration: underline;
+    color: #5B5A5D;
+  }
+/*-- ----------shopping_popup--------- --*/
+  .shopping_popup_outer,
+  .ai_popup_outer,
+  .search_popup_outer{
+    width: 400px; height: 100vh;
+    position: fixed;
+    top:0; right: 0;
+    background-color: #fff;
+    padding: 30px;
+    display: none;
+    z-index: 999;
+  }
+  .shopping_popup,
+  .ai_popup,
+  .search_popup{
+    position: relative;
+  }
+  .popup_title{
+    font-size: 36px;
+    color: #FF7A80;
+    margin-bottom: 30px;
+  }
+  .popup_sub_title{
+    color: #FF7A80;
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  .shopping_popup_top{
+    width: 400px; height: 100px;
+    margin-bottom: 60px;
+    text-align: center;
+  }
+  .shopping_product{
+    position: relative;
+    margin-bottom: 50px;
+  }
+  .shopping_product_top{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .shopping_product_top_left{
+    width: 100px;
+  }
+  .shopping_product_top_left img{
+    width: 100%; height: auto;
+  }
+  .shopping_product_top_right{
+    padding-left: 20px;
+    width: 280px;
+  }
+  .shopping_product_top{
+    display: flex;
+    line-height: 30px;
+  }
+  .shopping_product_bottom{
+    display: flex;
+  }
+  .shopping_product_bottom_left{
+    width: 100px; height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .shopping_product_bottom_right{
+    width: 300px; height: 30px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+  }
+  .shopping_product_check{
+    position: absolute;
+  }
+  .btn_product_delete{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: 14px;
+    border: none;
+    background-color: white;
+    color: #d9d9d9;
+  }
+  .shopping_close:hover,
+  .btn_product_delete:hover,
+  .shopping_product_bottom_left .minus:hover,
+  .shopping_product_bottom_left .plus:hover{
+    color: black;
+  }
+  .shopping_product_bottom_left .minus,
+  .shopping_product_bottom_left .plus{
+    border: none;
+    background-color: white;
+    color: #d9d9d9;
+  }
+  .shopping_product_bottom_left p{
+    padding: 0 10px;
+  }
+  .shopping_total_product_price,
+  .shopping_total_delivery_price,
+  .shopping_total_price{
+    display: flex;
+    justify-content: space-between;
+  }
+  .shopping_total_delete,
+  .shopping_choose_delete{
+    position: absolute;
+    width: 190px; height: 50px;
+    bottom: 200px;
+    border: 1px solid #FF7A80;
+    background-color: white;
+    border-radius: 10px;
+    font-size: 20px;
+    color: #5B5A5D;
+  }
+  .shopping_total_delete{
+    left: 30px;
+  }
+  .shopping_choose_delete{
+    left: 240px;
+  }
+  .shopping_all_order,
+  .shopping_choose_order{
+    position: absolute;
+    width: 400px; height: 50px;
+    border: 1px solid #FF7A80;
+    background-color: white;
+    border-radius: 10px;
+    font-size: 20px;
+    color: #5B5A5D;
+  }
+  .shopping_all_order{
+    bottom: 140px;
+  }
+  .shopping_choose_order{
+    bottom: 80px;
+  }
+  .shopping_close,
+  .ai_popup_close,
+  .search_popup_close{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: 24px;
+    border: none;
+    background-color: white;
+    color: #5B5A5D;
+  }
+  .shopping_total_delete:hover,
+  .shopping_choose_delete:hover,
+  .shopping_all_order:hover,
+  .shopping_choose_order:hover,
+  .ai_fitting_btn:hover{
+    background-color: #FF7A80;
+    color: white;
+  }
+
+/*-- ----------ai_popup--------- --*/
+  .ai_popup_top{
+    width: 400px; height: 100px;
+    margin-bottom: 60px;
+    text-align: center;
+  }
+  .ai_popup_middle01{
+    border: 1px dashed #FF7A80; box-sizing: border-box;
+    border-radius: 20px;
+    padding: 15px 0;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .ai_popup_middle01 img{
+    display: inline;
+  }
+  .ai_popup_middle02 {
+    width: 400px;
+    text-align: center;
+  }
+  .ai_popup_middle02 .ai_popup_search,
+  .search_popup_top .search_popup_search{
+    background-color: #FFF1EA;
+    width:400px; height: 50px;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 50px;
+    margin-bottom: 30px;
+  }
+  .ai_popup_middle02 .ai_popup_search input,
+  .search_popup_top input{
+    width: 300px; height: 30px;
+  }
+  .ai_popup_middle02 .ai_popup_search input,
+  .ai_popup_middle02 .ai_popup_search  button,
+  .search_popup input,
+  .search_popup_search button{
+    font-size: 18px;
+    border: none;
+    background-color: #FFF1EA;
+  }
+  .ai_popup_middle02 .ai_popup_search  button i,
+  .search_popup_search button i{
+  color: #d9d9d9;
+  }
+  .ai_popup_middle02 .ai_popup_search  button i:hover,
+  .search_popup_search button i:hover{
+  color: #5B5A5D;
+  }
+  .ai_popup_middle02 .ai_product,
+  .search_popup_bottom{
+    display: flex;
+    font-size: 14px;
+    justify-content: space-around;
+    text-align: center;
+  }
+  .ai_product01,
+  .ai_product02,
+  .ai_product03,
+  .search_product01,
+  .search_product02,
+  .search_product03{
+    width: 100px;
+  }
+  .ai_fitting_btn{
+    position: absolute;
+    bottom: -300px;
+    width: 400px; height: 50px;
+    background-color: white;
+    border: 1px solid #FF7A80;
+    border-radius: 10px;
+    font-size: 20px;
+    color: #5B5A5D;
+  }
+/* -------------search_popup----------- */
+  .search_popup_top{
+    margin-bottom: 40px;
+  }
+  .search_popup_search{
+    margin-top: 30px;
+  }
+  .search_popup_close{
+    top: -30px;
+  }
+  .search_popup_subtitle{
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  .search_popup_middle01{
+    margin-bottom: 30px;
+  }
+  .search_popup_middle01 ul{
+    flex-wrap: wrap;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+  .search_popup_middle01 ul li{
+    margin-bottom: 10px;
+  }
+  .search_popup_middle01 ul li,
+  .search_popup_middle02 label{
+    height: 25px;
+    padding: 5px 10px;
+    border: 1px solid #FF7A80;
+    border-radius: 20px;
+    line-height: 25px;
+    text-align: center;
+  }
+  .search_popup_middle01 ul li:hover,
+  .search_popup_middle02 label:hover{
+    background-color: #FF7A80;
+  }
+  .search_popup_middle01 ul li:hover a,
+  .search_popup_middle02 label:hover a{
+    color: white;
+  }
+  .search_popup_middle01 ul li:hover button{
+    background-color: #FF7A80;
+  }
+  .search_popup_middle01 ul li button{
+    border: none;
+    background-color: white;
+  }
+  .search_popup_middle01 ul li button i{
+    font-size: 14px;
+    color: #d9d9d9;
+  }
+  .search_popup_middle01 ul li button i:hover{
+    color: #5B5A5D;
+  }
+  .search_popup_middle02{
+    margin-bottom: 40px;
+  }
+  #search_popup_recommend01,
+  #search_popup_recommend02,
+  #search_popup_recommend03,
+  #search_popup_recommend04,
+  #search_popup_recommend05{
+  display: none;
+  }
+  .search_popup_middle03{
+    display: flex;
+    margin-bottom: 40px;
+  }
+  .search_popup_middle03 ul{
+    flex-grow: 1;
+  }
+  .search_popup_middle03 ul li{
+    margin-bottom: 5px;
+  }
+  /*-- ----------footer--------- --*/
+  .footer_outer{
+    width: 100%;
+    background-color: #FFF1EA;
+    padding: 30px;
+  }
+  .footer{
+    display: flex;
+    margin: 0 auto;
+    width: 1245px;
+    justify-content: space-between;
+  }
+  .footer_title{
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  /*-- ----------aside--------- --*/
+  .quick_btn{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+  }
+  .quick_btn img{
+    border-radius: 50%;
+  }
+  .quick_btn a:nth-child(2) img{
+    margin: 10px 0;
+  }
+    /* --------------------------  transition-------------------------- */
+  </style>
+</head>
+<body>
+ <header class="header" id="top">
+    <div class="header_event">
+      <p><a href="#!">회원가입시 최대 10,000원 할인</a></p>
+    </div>
+    <section class="header_inner">
+      <div class="header_utility">
+        <p>로그인</p>
+        <p>회원가입</p>
+        <p>커뮤니티</p>
+      </div>
+      <div class="header_logo">
+        <img src="./images/logo_header.png" alt="로고_헤더">
+      </div>
+      <div class="header_usermenu">
+        <a href="#!" class="shopping_open"><i class="fa-solid fa-bag-shopping"></i></a>
+        <a href="#!"><i class="fa-regular fa-user"></i></a>
+        <a href="#!" class="search_popup_open"><i class="fa-solid fa-magnifying-glass"></i></a>
+      </div>
+    </section>
+  </header>
+  <nav class="gnb">
+    <div class="gnb_menu">
+      <a href="#!"><i class="fa-solid fa-bars btn_open"></i></a>
+      <a href="#!"><i class="fa-solid fa-x btn_close"></i></a>
+      <p><a href="#!">신상</a></p>
+      <p class="touch"><a href="./shopping_mall_sub.html">인기</a></p>
+      <p><a href="#!">영아</a></p>
+      <p><a href="#!">유아</a></p>
+      <p><a href="#!">신발</a></p>
+      <p><a href="#!">악세서리</a></p>
+      <p><a href="#!">육아템</a></p>
+    </div>
+    <div class="gnb_menu_full_outer">
+      <div class="gnb_menu_full">
+        <a href="#!"><i class="fa-solid fa-bars"></i></a>
+        <ul class="menu_full02">
+          <li><a href="#!">상의</a></li>
+          <li><a href="">하의</a></li>
+          <li><a href="#!">상하의</a></li>
+          <li><a href="#!">아우터</a></li>
+          <li><a href="#!">실내복</a></li>
+          <li><a href="#!">신발</a></li>
+          <li><a href="#!">악세서리</a></li>
+        </ul>
+        <ul class="menu_full03">
+          <li><a href="#!">상의</a></li>
+          <li><a href="">하의</a></li>
+          <li><a href="#!">상하의</a></li>
+          <li><a href="#!">아우터</a></li>
+          <li><a href="#!">실내복</a></li>
+          <li><a href="#!">신발</a></li>
+          <li><a href="#!">악세서리</a></li>
+        </ul>
+        <ul class="menu_full04">
+          <li><a href="#!">0-2세 추천</a></li>
+          <li><a href="#!">집콕룩</a></li>
+          <li><a href="#!">외출룩</a></li>
+          <li><a href="#!">피부민감용</a></li>
+        </ul>
+        <ul class="menu_full05">
+          <li><a href="#!">3-5세 추천</a></li>
+          <li><a href="#!">등원룩</a></li>
+          <li><a href="#!">활동룩</a></li>
+          <li><a href="#!">데일리룩</a></li>
+        </ul>
+        <ul class="menu_full06">
+          <li><a href="#!">운동화</a></li>
+          <li><a href="#!">구두</a></li>
+          <li><a href="#!">실내화</a></li>
+          <li><a href="#!">샌들</a></li>
+          <li><a href="#!">장화</a></li>
+          <li><a href="#!">아쿠아슈즈</a></li>
+          <li><a href="#!">젤리슈즈</a></li>
+          <li><a href="#!">부츠</a></li>
+        </ul>
+        <ul class="menu_full07">
+          <li><a href="#!">모자</a></li>
+          <li><a href="#!">헤어</a></li>
+          <li><a href="#!">양말</a></li>
+          <li><a href="#!">가방</a></li>
+          <li><a href="#!">장갑</a></li>
+          <li><a href="#!">목도리</a></li>
+        </ul>
+        <!-- <div class="line"></div> -->
+        <ul class="menu_full08">
+          <li><a href="#!">수유 용품</a></li>
+          <li><a href="#!">목욕 용품</a></li>
+          <li><a href="#!">속겉싸개</a></li>
+          <li><a href="#!">아기띠</a></li>
+          <li><a href="#!">턱받이</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<!-- ----------login--------- -->
+  <div class="login_outer">
+    <h3>로그인</h3>
+    <p>로그인 하시면 상품 리뷰 등록 및 내가 찜한 상품, 상품 배송,</p>
+    <p>이벤트 등의 다양한 기능을 사용하실 수 있습니다.</p>
+
+    <div class="kakao">
+      <button>
+        <a href="https://ir.kakaocorp.com/mo/member">  
+        <i class="fa-brands fa-kakao-talk"></i>
+        <p>카카오톡으로 로그인</p>
+        </a>
+      </button>
+    </div>
+    <div class="naver">
+      <button>
+          <a href="https://nid.naver.com/nidlogin.login?mode=form&url=https://www.naver.com/">
+          <span>N</span>
+          <p>네이버 ID로 로그인</p>
+        </a>
+        </button>
+    </div>
+    <div class="apple">
+      <button>
+        <a href="https://account.apple.com/">
+          <i class="fa-brands fa-apple"></i>
+          <p>애플 ID로 로그인</p>
+        </a>
+      </button>
+    </div>
+    <div class="google">
+      <button>
+        <a href="https://accounts.google.com/v3/signin/identifier?dsh=S-936239352%3A1785710708085430&flowEntry=ServiceLogin&flowName=GlifWebSignIn&ifkv=Ac50bxuxzWtyoI7R4Eug2gO6A8QybFRnk391JSqIbrNqJRjs4PG07UaCzE-QIT-UowX4ZQmw16AI&service=accountsettings">
+          <i class="fa-brands fa-google"></i>
+          <p>구글 ID로 로그인</p>
+        </a>
+      </button>
+    </div>
+    <div class="line">
+      <hr>
+      <p>또는</p>
+      <hr>
+    </div>
+    <div class="user_login_outer">
+      <div class="user_login">
+        <input type="radio" name="login" id="member" checked>
+        <input type="radio" name="login" id="nonmember">
+        <div class="user_login_tab">
+          <label for="member">기존 회원</label>
+          <label for="nonmember">비회원 주문조회</label>
+        </div>
+        <div class="member_login">
+          <label for="userId">아이디</label>
+          <input type="text" id="userId">
+          <label for="userPw">비밀번호</label>
+          <input type="text" id="userPw">
+          <button type="submit">로그인</button>
+        </div>
+        <div class="nonmember_login">
+          <label for="userId">주문자명</label>
+          <input type="text" id="orderName">
+          <label for="userPw">주문번호 (하이픈 '-' 포함)</label>
+          <input type="text" id="orderNum">
+          <label for="userPw">비회원 주문조회 비밀번호</label>
+          <input type="text" id="order">
+          <button type="submit">주문조회</button>
+        </div>
+      </div>
+    </div>
+    <div class="login_more">
+      <button type="button">회원가입 </button>
+      <p>  |  </p>
+      <button type="button">아이디 찾기</button>
+      <p>  |  </p>
+      <button type="button"> 비밀번호 찾기</button>
+    </div>
+  </div>
+<!-- ----------footer--------- -->
+  <footer class="footer_outer" id="footer">
+    <div class="footer">
+      <div class="footer_left">
+        <div class="footer_title">BEBE</div>
+        <div class="footer_company">
+          <span>상호 : (주)베베</span>
+          <span>대표 : 정유진</span>
+          <span> 대표전화 : 010.1234.1234</span>
+          <p>팩스 : 02.000.0000</p>
+          <p>주소 : 100425 부산광역시 배구 베베동 베베윅스</p>
+          <p>사업자 등록번호 : 777-77-100042[사업자정보확인]</p>
+          <p>통신 판매업 신고번호 : 제 2026-부산 배구-1004호</p>
+          <span>개인 정보 보호 책임자 : 정유진</span>
+          <span>e-meil : BEBE@wings.com</span>
+        </div>
+      </div>
+      <div class="footer_middle">
+        <div class="footer_title">고객센터</div>
+        <div class="footer_info">
+          <p>070.1351.1351</p>
+          <p>평일 오전 10:00 - 오후 5:00</p>
+          <p>*금요일 - 오후 4:00</p>
+          <p>+입금계좌 정보</p>
+        </div>
+      </div>
+      <div class="footer_right">
+        <div class="footer_title">서비스정보</div>
+        <div class="footer_info">
+          <p><a href="#!">회사소개</a></p>
+          <p><a href="#!">이용약관</a></p>
+          <p><a href="#!">개인정보 처리 방침</a></p>
+          <p><a href="#!">이용안내</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <aside class="quick_btn">
+    <a href="#!">
+      <img src="./images/quick_chat.jpg" alt="채팅">
+    </a>
+    <a href="#top">
+      <img src="./images/quick_up.jpg" alt="업">
+    </a>
+    <a href="#footer">
+      <img src="./images/quick_down.jpg" alt="다운">
+    </a>
+  </aside>
+  <!-- ----shopping_popup--- -->
+   
+  <section class="shopping_popup_outer">
+    <div class="shopping_popup">
+     <div class="shopping_popup_top">
+      <p class="popup_title">장바구니</p>
+      <p class="popup_sub_title">총 2개의 상품이 담겨있습니다.</p>
+     </div>
+     <div class="shopping_product">
+      <input type="checkbox" class="shopping_product_check" checked>
+       <button type="button" class="btn_product_delete">
+      <i class="fa-solid fa-xmark"></i></button>
+       <div class="shopping_product_top">
+        <div class="shopping_product_top_left">
+         <a href="#!"><img src="./images/shopping01.jpg" alt="장바구니01"></a>
+        </div>
+        <div class="shopping_product_top_right">
+          <p><a href="#!">피피 바디수트</a></p>
+          <p>18,900원</p>
+          <p>배송 : 무료 / 기본 배송</p>
+        </div>
+       </div>
+       <div class="shopping_product_bottom">
+         <div class="shopping_product_bottom_left">
+          <button class="minus">
+           <i class="fa-solid fa-minus"></i>
+          </button>
+          <p>1</p>
+          <button class="plus">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+         </div>
+         <div class="shopping_product_bottom_right">
+           <p>주문 금액 : 18,900원</p>
+         </div>
+        </div>
+      </div>
+      <div class="shopping_product">
+      <input type="checkbox" class="shopping_product_check" checked>
+        <button type="button" class="btn_product_delete">
+          <i class="fa-solid fa-xmark"></i></button>
+          <div class="shopping_product_top">
+            <div class="shopping_product_top_left">
+              <a href="#!"><img src="./images/shopping02.jpg" alt="장바구니02"></a>
+            </div>
+            <div class="shopping_product_top_right">
+              <p><a href="#!">DREAM-SKY</a></p>
+              <p>58,000원</p>
+              <p>배송 : 무료 / 기본 배송</p>
+            </div>
+          </div>
+          <div class="shopping_product_bottom">
+            <div class="shopping_product_bottom_left">
+              <button class="minus">
+                <i class="fa-solid fa-minus"></i>
+              </button>
+              <p>1</p>
+              <button class="plus">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+            <div class="shopping_product_bottom_right">
+              <p>주문 금액 : 58,000원</p>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="shopping_close">
+        <i class="fa-solid fa-xmark"></i>
+        </button>
+      <div class="shopping_popup_bottom">
+        <div class="shopping_total_product_price">
+          <p>총 상품 금액</p>
+          <p>76,900원</p>
+        </div>
+        <div class="shopping_total_delivery_price">
+          <p>총 배송비</p>
+          <p>0원</p>
+        </div>
+        <div class="shopping_total_price">
+          <p>총 결제금액</p>
+          <p>76,900원</p>
+        </div>
+      </div>
+    </div>
+      <button class="shopping_total_delete">전체상품선택</button>
+      <button class="shopping_choose_delete">선택상품삭제</button>
+      <button class="shopping_all_order">전체상품주문</button>
+      <button class="shopping_choose_order">선택상품주문</button>
+  </div>
+  </section>
+<!-- -------------ai_popup----------- -->
+  <section class="ai_popup_outer">
+    <div class="ai_popup">
+     <div class="ai_popup_top">
+      <p class="popup_title">AI 가상 피팅</p>
+      <p class="popup_sub_title">1단계. 전신 사진을 선택해주세요.</p>
+      <p class="popup_sub_title">2단계. 상품을 선택해주세요.</p>
+     </div>
+      <p class="popup_sub_title">1단계</p>
+     <div class="ai_popup_middle01">
+      <div>
+        <p>전신 사진을 선택해주세요.</p>
+        <img src="./images/review_write_photo.jpg" alt="">
+      </div>
+     </div>
+      <p class="popup_sub_title">2단계</p>
+     <div class="ai_popup_middle02">
+      <div class="ai_popup_search">
+        <input type="search" placeholder="검색어를 입력해주세요">
+        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+      </div>
+      <div class="ai_product">
+        <div class="ai_product01"><a href="#!"><img src="./images/ai01.jpg" alt="ai_img"><p>하늘하늘 탑</p></a></div>
+        <div class="ai_product02"><a href="#!"><img src="./images/ai02.jpg" alt=""><p>블롬샤베트 세트</p></a></div>
+        <div class="ai_product03"><a href="#!"><img src="./images/ai03.jpg" alt=""><p>물개친구 세트</p></a></div>
+      </div>
+     </div>
+     <button type="button" class="ai_popup_close">
+       <i class="fa-solid fa-xmark"></i>
+     </button>
+     <button class="ai_fitting_btn">AI 가상 피팅 시작하기</button>
+    </div>
+  </section>
+<!-- -------------search_popup----------- -->
+  <section class="search_popup_outer">
+    <div class="search_popup">
+      <div class="search_popup_top">
+        <div class="search_popup_search">
+          <input type="search" placeholder="검색어를 입력해주세요">
+          <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+      </div>
+      <p class="search_popup_subtitle">최근 검색어</p>
+      <div class="search_popup_middle01">
+        <ul class="wrap">
+          <li>
+            <a href="./shopping_mall_sub.html">여아</a>
+            <button type="button" class="btn_search_delete">
+             <i class="fa-solid fa-xmark"></i>
+            </button>
+          </li>
+          <li>
+            <a href="#!">원피스</a>
+            <button type="button" class="btn_search_delete">
+             <i class="fa-solid fa-xmark"></i>
+            </button>
+          </li>
+          <li>
+            <a href="#!">바지</a>
+            <button type="button" class="btn_search_delete">
+             <i class="fa-solid fa-xmark"></i>
+            </button>
+          </li>
+          <li>
+            <a href="#!">신발</a>
+            <button type="button" class="btn_search_delete">
+             <i class="fa-solid fa-xmark"></i>
+            </button>
+          </li>
+          <li>
+            <a href="#!">봄</a>
+            <button type="button" class="btn_search_delete">
+             <i class="fa-solid fa-xmark"></i>
+            </button>
+          </li>
+          <li>
+            <a href="#!">신상품</a>
+            <button type="button" class="btn_search_delete">
+             <i class="fa-solid fa-xmark"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+      <p class="search_popup_subtitle">베베 추천 검색어</p>
+      <div class="search_popup_middle02">
+        <input type="checkbox" name="search_popup_recommend01" id="search_popup_recommend01">
+        <input type="checkbox" name="search_popup_recommend02" id="search_popup_recommend02">
+        <input type="checkbox" name="search_popup_recommend03" id="search_popup_recommend03">
+        <input type="checkbox" name="search_popup_recommend04" id="search_popup_recommend04">
+        <input type="checkbox" name="search_popup_recommend05" id="search_popup_recommend05">
+        <div class="search_popup">
+          <label for="search_popup_recommend01"><a href="#!">집콕룩</a></label>
+          <label for="search_popup_recommend02"><a href="#!">키키티셔츠</a></label>
+          <label for="search_popup_recommend03"><a href="#!">신상</a></label>
+          <label for="search_popup_recommend04"><a href="#!">육아필수템</a></label>
+          <label for="search_popup_recommend05"><a href="#!">모자</a></label>
+        </div>
+      </div>
+      <p class="search_popup_subtitle">인기 검색어</p>
+      <div class="search_popup_middle03">
+        <ul class="search_popular_left">
+          <li><a href="#!">1. 수영복</a></li>
+          <li><a href="#!">2. 여름옷</a></li>
+          <li><a href="#!">3. 모자</a></li>
+          <li><a href="#!">4. 바람막이</a></li>
+          <li><a href="#!">5. 모기장옷</a></li>
+        </ul>
+        <ul class="search_popular_right">
+          <li><a href="#!">6. 바디수트</a></li>
+          <li><a href="#!">7. 턱받이</a></li>
+          <li><a href="#!">8. 필수템</a></li>
+          <li><a href="#!">9. 젤리슈즈</a></li>
+          <li><a href="#!">10. 샌들</a></li>
+        </ul>
+      </div>
+      <p class="search_popup_subtitle">방금 본 상품</p>
+      <div class="search_popup_bottom">
+          <div class="search_product01"><a href="#!"><img src="./images/search01.jpg" alt="search_img"><p>톡톡매쉬 샌들</p></a></div>
+          <div class="search_product02"><a href="#!"><img src="./images/search02.jpg" alt=""><p>플라워 슬리온</p></a></div>
+          <div class="search_product03"><a href="#!"><img src="./images/search03.jpg" alt=""><p>키치드레스</p></a></div>
+      </div>
+      <button type="button" class="search_popup_close">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+  </section>
+</body>
+</html>

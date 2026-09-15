@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+html {
+  font-size: 16px;
+}
+
+button {
+  cursor: pointer;
+}
+
+/***************** common ******************/
+body {
+  color: #333;
+}
+
+.contents_title {
+  margin: 0 20px 10px 10px;
+  width: calc(100% - 20px);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+}
+.contents_title p {
+  font-size: 1.2rem;
+}
+.contents_title .more a {
+  font-size: 0.8rem;
+  color: #999;
+}
+
+.mb {
+  margin-bottom: 30px;
+}
+
+/************** login_outer **************/
+.login_outer {
+  margin: 100px auto;
+  text-align: center;
+}
+.login_outer h3 {
+  font-size: 1.4rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.login_outer p {
+  text-align: center;
+}
+.login_outer > div > button {
+  margin: 10px;
+  height: 50px;
+  width: 230px;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+.login_outer > div > button a {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+.login_outer .kakao {
+  margin-top: 30px;
+}
+.login_outer .kakao button {
+  margin-top: 30px;
+  background-color: #FEE500;
+}
+.login_outer .naver button {
+  background-color: #03C75A;
+}
+.login_outer .naver button a span {
+  font-weight: bold;
+  color: white;
+}
+.login_outer .naver button a p {
+  color: white;
+}
+.login_outer .apple button {
+  background-color: #000;
+}
+.login_outer .apple button a i {
+  color: white;
+}
+.login_outer .apple button a p {
+  color: white;
+}
+.login_outer .google button {
+  background-color: white;
+}
+.login_outer .google button a p {
+  color: white;
+}
+.login_outer .line {
+  max-width: 500px;
+  margin: 30px auto;
+  display: flex;
+  height: 30px;
+}
+.login_outer .line hr {
+  margin: 14px 0;
+  text-align: center;
+  border: none;
+  background-color: #999;
+  height: 1px;
+  flex: 1;
+}
+.login_outer .line p {
+  line-height: 30px;
+  text-align: center;
+  color: #999;
+  margin: 0 10px;
+}
+.login_outer .phone_outer {
+  background-color: #03C75A;
+}
+.login_outer .phone_outer #phone {
+  display: none;
+}
+.login_outer .phone_outer .phone_tab {
+  margin: 10px;
+  height: 50px;
+  width: 230px;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+.login_outer .user_info_outer {
+  background-color: #03C75A;
+}
+
+/************** footer_outer **************//*# sourceMappingURL=signup.css.map */

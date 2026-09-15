@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+html {
+  font-size: 16px;
+}
+
+/***************** common ******************/
+body {
+  color: #333;
+}
+
+.contents_title {
+  margin: 0 20px 10px 10px;
+  width: calc(100% - 20px);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+}
+.contents_title p {
+  font-size: 1.2rem;
+}
+.contents_title .more a {
+  font-size: 0.8rem;
+  color: #999;
+}
+
+.mb {
+  margin-bottom: 30px;
+}
+
+/************** login_title **************/
+/************** login_outer **************/
+.login_outer {
+  margin: 100px auto;
+  text-align: center;
+}
+.login_outer h3 {
+  font-size: 1.4rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.login_outer p {
+  text-align: center;
+}
+.login_outer > div > button {
+  margin: 10px;
+  height: 50px;
+  width: 230px;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+.login_outer > div > button a {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+.login_outer .kakao button {
+  margin-top: 30px;
+  background-color: #FEE500;
+}
+.login_outer .naver button {
+  background-color: #03C75A;
+}
+.login_outer .naver button a span {
+  font-weight: bold;
+  color: white;
+}
+.login_outer .naver button a p {
+  color: white;
+}
+.login_outer .apple button {
+  background-color: #000;
+}
+.login_outer .apple button a i {
+  color: white;
+}
+.login_outer .apple button a p {
+  color: white;
+}
+.login_outer .google button {
+  background-color: #ddd;
+}
+.login_outer .google button a p {
+  color: white;
+}
+.login_outer .login_more {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 400px;
+}
+.login_outer .login_more button {
+  width: 126.6666666667px;
+  background-color: white;
+  border-radius: 20px;
+  border: 1px solid #eee;
+  box-sizing: border-box;
+  color: #ddd;
+  align-items: center;
+  text-align: center;
+  border: none;
+}
+.login_outer .login_more p {
+  width: 10px;
+  color: #ddd;
+}/*# sourceMappingURL=login.css.map */

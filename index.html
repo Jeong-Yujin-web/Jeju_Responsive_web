@@ -1,0 +1,1460 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0, user-scalable=no">
+  <!-- icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
+  <!-- css -->
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.css">
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/ScrollToPlugin.min.js"></script>
+  <!-- Swiper -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-element-bundle.min.js"></script>
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!-- Slick CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <!-- bxSlider JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.js"></script>
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <!-- Slick JS 추가 -->
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <!-- JS -->
+  <script type="module" src="./js/main.js" defer></script>
+
+  <title>Jeju_Renewal</title>
+  <style>
+   /* tablet ver. */
+   @media all and (min-width : 601px){
+    .contents_title p{
+      font-size: 1.4rem;
+    }
+    .contents_title .more a{
+      font-size: 1rem;
+    }
+    /****************** metapo ******************/
+    .metapo_outer .metapo_tablet{display: block;}
+    .metapo_outer .metapo_pc,
+    .metapo_outer .metapo
+      {display: none;}
+    /****************** ai ******************/
+    .contents01_outer .contents_left{
+      width: 100%;
+    }
+    .contents01_outer > div .contents_left img{
+      margin-top: 40px;
+      margin-bottom: 0;
+      width: calc((100% - 30px)/4);
+      margin-right: 10px;
+      float: left;
+    }
+    .contents01_outer .contents_left img:nth-child(4){
+      margin-right: 0;
+    }
+    .contents01_outer > div .contents_middle{
+      position: static;
+      margin: 20px 0;
+      width: 100%;
+      position: relative;
+    } 
+    .contents_right{
+      display: flex;
+    }
+    .contents01_outer > div .contents_middle .line{
+      width: calc(75% + 19px); height: 1px;
+      align-items: center;
+      margin-top: 20px;
+      flex-direction: column;
+    }
+    .contents01_outer > div .contents_middle .circle{
+      position: absolute;
+      width: 10px; height: 10px;
+    }
+    .contents01_outer > div .contents_middle>div:nth-child(2){
+      top: 16px; left: calc(10% + 5px);
+    }
+    .contents01_outer > div .contents_middle>div:nth-child(3){
+      top: 16px; left: calc(40% - 20px);
+    }
+    .contents01_outer > div .contents_middle>div:nth-child(4){
+      top: 16px; left: calc(65% - 20px);
+    }
+    .contents01_outer > div .contents_middle>div:last-child{
+      top: 15px; left: calc(90% - 15px);
+    }
+    .contents01_outer > div > div{
+      float: none;
+    }
+    .contents01_box01>div .contents_middle,
+    .contents01_box02>div .contents_middle,
+    .contents01_box03>div .contents_middle,
+    .contents01_box04>div .contents_middle{
+      float: none;
+      flex-direction: column;
+      display: flex;
+      align-items: center;
+      right: 0;
+    }
+    .contents01_outer > div .contents_right{
+      margin-top: 0;
+      flex-grow: 1;
+      justify-content: space-evenly;
+      display: flex;
+    }
+    .contents01_outer > div .contents_right .contents_text p{
+      font-size: 0.8rem;
+    }
+    .contents01_outer > div .contents_right .contents_text p:first-child{
+      font-size: 1rem;
+    }
+    .contents01_outer > div .contents_right .contents_place{
+      font-size: 1.2rem;
+    }
+    .illust_outer{
+      display: none;
+    }
+   /****************** K-Artist ******************/
+   
+    .contents02_outer .contents02_box_outer .contents02_box .artist_box{
+      width: 30%;
+    }
+    /****************** festival ******************/
+    .contents03_outer{}
+    .contents03_outer .contents03 .festival_list{
+      height: auto;
+      flex-direction: row;
+    }
+    .contents03_outer .contents03 .festival_list .festival{
+      height: 500px;
+      border-radius: 0;
+    }
+    .contents03_outer .contents03 .festival_list .festival:first-child{
+      border-radius: 20px 0 0 20px;
+    }
+    .contents03_outer .contents03 .festival_list .festival:last-child{
+      border-radius: 0 20px 20px 0;
+    }
+   /****************** map ******************/
+    .contents04_outer .contents04>div>picture .facilities_toilet_open,
+    .contents04_outer .contents04>div>picture .facilities_parking_open{
+      font-size: 1.6rem;
+      padding: 8px;
+    }
+    .contents04_outer .contents04 .contents04_box04 .facilities_parking_open{
+      top: 50px; left: 620px;
+    }
+    /****************** sns ******************/
+    .contents05_outer .contents05_box{
+      height: auto;
+      padding-bottom: 10px;
+    }
+    /****************** footer ******************/
+    .footer_outer{
+      
+    }
+    .footer_outer .footer .footer_top img{
+      width: 50%;
+    }
+  }
+
+
+/* pc01 ver. */
+  @media all and (min-width : 769px){
+    /****************** header ******************/
+    .header_outer{}
+    .header_outer .header{
+      justify-content: flex-start;
+      font-size: 1.2rem;
+    }
+    .header_outer .header .gnb_outer_pc{
+      display: block;
+      flex: 3;
+    }
+    .header_outer .header .gnb_outer_pc ul{
+      display: flex;
+      justify-content: space-evenly;
+    }
+    .header_outer .header .btn button{
+      font-size: 1.4rem;
+    }
+    .header_outer .header .btn .search_box{
+      display: block;
+      border: 1px solid #666; box-sizing: border-box;
+      border-radius:30px;
+      height: 40px;
+    }
+    .header_outer .header .btn .search_box:focus-within{
+      color: #468432;
+      border-color: #468432;
+    }
+    .header_outer .header .btn>div i{
+      line-height: 40px;
+      margin-right: 10px;
+    }
+    .header_outer .header .btn>div input{
+      border: none;
+    }
+    .header_outer .header .btn button:nth-child(5){
+      display: block;
+      padding-bottom: 6px;
+    }
+    .header_outer .header .btn>button:nth-child(3){
+      display: none;
+     }
+    .header_outer .header .btn button:nth-child(4){
+      display: none;
+    }
+    .header_outer .header .btn button:nth-child(1),
+    .header_outer .header .btn button:nth-child(5),
+    .header_outer .header .btn button:nth-child(6),
+    .header_outer .header .btn button:nth-child(7){
+      display: block;
+    }
+    .gnb_outer_pc{
+      display: flex;
+    }
+    .wing_outer_mobile{
+      display: none;
+    }
+    /****************** outer ******************/
+    .mb{
+      margin-bottom: 60px;
+    }
+    /****************** metapo ******************/
+    .metapo_outer .metapo_pc{display: block;}
+    .metapo_outer .metapo_tablet,
+    .metapo_outer .metapo
+    {display: none;}
+    /****************** ai ******************/
+      .contents01_outer > div .contents_left img{
+      height: 195px;
+      }
+        .contents01_outer > div .contents_middle .line{
+      width: 78%; height: 1px;
+    }
+    /****************** K-Artist ******************/
+    .page{
+      display: none;
+    }
+    /****************** festival ******************/
+    /****************** map ******************/
+     .contents04_outer .contents04 > div .facilities_toilet_popup .facilities_toilet_close,
+     .contents04_outer .contents04 > div .facilities_parking_popup .facilities_parking_close
+     {
+      display: none;
+     }
+     .contents04_outer .contents04 > div .facilities_toilet_popup{
+      display: block;
+     }
+     .contents04_outer .contents04 > div .facilities_toilet_popup,
+     .contents04_outer .contents04 > div .facilities_parking_popup{
+      position: static;
+      margin-left: 10px;
+    }
+    .contents04_outer .contents04_box01,
+    .contents04_outer .contents04_box02,
+    .contents04_outer .contents04_box03,
+    .contents04_outer  .contents04_box04{
+      justify-content: left;
+    }
+    .contents04_outer .contents04_box01 .facilities_toilet_open:checked ~ .contents04_box01 .facilities_toilet_popup,
+    .contents04_outer .contents04_box01 .facilities_parking_open:checked ~ .contents04_box01 .facilities_toilet_popup{
+      display: block;
+    }
+    .contents04_outer .contents04 > div .facilities_toilet_popup, .contents04_outer .contents04 > div .facilities_parking_popup{
+      width: 39%;
+      border: 1px solid #468432;
+    }
+    .contents04_outer .contents04 .contents04_box01 .facilities_toilet_open{
+      top: 16%; left: 9%;
+    }
+    .contents04_outer .contents04 .contents04_box01 .facilities_parking_open{
+      top: 43%; left: 25%;
+    }
+    .contents04_outer .contents04 .contents04_box02 .facilities_toilet_open{
+      top: 21%; left: 9%;
+    }
+    .contents04_outer .contents04 .contents04_box02 .facilities_parking_open{
+      top: 30%; left: 23%;
+    }
+    .contents04_outer .contents04 .contents04_box03 .facilities_toilet_open{
+      top: 30%; left: 66%;
+    }
+    .contents04_outer .contents04 .contents04_box03 .facilities_parking_open{
+      top: 6%; left: 75%;
+    }
+    .contents04_outer .contents04 .contents04_box04 .facilities_toilet_open{
+      top: 29%; left: 61%;
+    }
+    .contents04_outer .contents04 .contents04_box04 .facilities_parking_open{
+      top: 11%; left: 78%;
+    }
+    /****************** sns ******************/
+
+    /****************** footer ******************/  
+    /****************** aside ******************/  
+    .aside .quick_btn{
+      width: 50px; height: 50px;
+      font-size: 1.2rem;
+      line-height: 50px;
+    }
+ }
+/* pc02 ver. */
+ @media all and (min-width : 1245px){
+  /****************** outer ******************/
+  .metapo_outer,
+  .contents01_outer,
+  .contents02_outer,
+  .contents03_outer,
+  .contents04_outer,
+  .contents05_outer{
+    width: 1245px;
+    margin: 0 auto;
+    margin-bottom: 90px;
+  }
+  .header_outer .header,
+  .footer_outer .footer .footer_top{
+    width: 1245px;
+    margin: 0 auto;
+  }
+  .header_outer .gnb_menu_full_outer .gnb_menu_full ul{
+    width: 11%;
+    margin-left: 4px;
+  }
+  /****************** visual_main ******************/
+  .mySwiper::part(button-prev) {
+    left: 50px;
+  }
+
+  .mySwiper::part(button-next) {
+    right: 50px;
+  }
+  /****************** metapo ******************/
+    .metapo_outer .metapo_pc{display: block;}
+    .metapo_outer .metapo_tablet,
+    .metapo_outer .metapo
+    {display: none;}
+  /****************** ai ******************/
+  /****************** K-Artist ******************/
+  /****************** festival ******************/
+  /****************** map ******************/
+  .contents04_outer .contents04 > div .facilities_toilet_popup, .contents04_outer .contents04 > div .facilities_parking_popup{
+    width: 34%;
+    border: 1px solid #468432;
+  }
+  /****************** sns ******************/
+  /****************** footer ******************/
+  .footer_outer .footer .footer_top img{
+  }
+  .footer_bottom>div,
+  .footer_copyright p{
+    width: 1245px;
+    margin: 0 auto;
+  }
+ }
+ </style>
+
+<script>
+  $(document).ready(function(){
+   $('.swiper-slide').on('mouseover', function(){
+   swiper.autoplay.stop();
+   });
+   $('.swiper-slide').on('mouseout', function(){
+   swiper.autoplay.start();
+   });
+  });
+ </script>
+
+</head>
+<body>
+  <div class="header_outer">
+    <div class="gnb_menu_full_outer">
+      <div class="gnb_menu_full">
+        <ul class="menu_full02">
+          <li><a href="./sub_page.html">지금 제주는</a></li>
+          <li><a href="./sub_page.html">제주 관광지</a></li>
+          <li><a href="./sub_page.html">음식</a></li>
+          <li><a href="./sub_page.html">숙박</a></li>
+          <li><a href="./sub_page.html">쇼핑</a></li>
+        </ul>
+        <ul class="menu_full03">
+          <li><a href="./sub_page.html">추천 여행지</a></li>
+          <li><a href="./sub_page.html">추천 코스</a></li>
+        </ul>
+        <ul class="menu_full04">
+          <li><a href="./sub_page.html">Artist-pick</a></li>
+          <li><a href="./sub_page.html">드라마 촬영지</a></li>
+        </ul>
+        <ul class="menu_full05">
+          <li><a href="./sub_page.html">오름길 소개</a></li>
+          <li><a href="./sub_page.html">코스 안내</a></li>
+        </ul>
+        <ul class="menu_full06">
+          <li><a href="./sub_page.html">여행소식</a></li>
+          <li><a href="./sub_page.html">공지</a></li>
+          <li><a href="./sub_page.html">이벤트</a></li>
+          <li><a href="./sub_page.html">관광 안내소</a></li>
+          <li><a href="./sub_page.html">교통 정보</a></li>
+        </ul>
+        <div class="gnb_menu_banner">
+          <ul class="gnb_menu_img">
+            <li><img src="./images/PC버전/banner/gnb_banner01.jfif" alt=""></li>
+            <li><img src="./images/PC버전/banner/gnb_banner02.png" alt=""></li>
+            <li><img src="./images/PC버전/banner/gnb_banner03.jfif" alt=""></li>
+            <li><img src="./images/PC버전/banner/gnb_banner04.jfif" alt=""></li>
+            <li><img src="./images/PC버전/banner/gnb_banner05.jfif" alt=""></li>
+            <li><img src="./images/PC버전/banner/gnb_banner06.jfif" alt=""></li>
+            <li><img src="./images/PC버전/banner/gnb_banner07.jfif" alt=""></li>
+         </ul>
+          <div class="slider_btn">
+            <button id="slider-prev"></button>
+            <button id="slider-next"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="search_popup_outer">
+      <div class="search_popup">
+        <button type="button" class="search_close"><i class="fa-solid fa-xmark"></i></button>
+        <div class="search_popup_top">
+          <div class="search_popup_search">
+            <input type="search" placeholder="검색어를 입력해주세요">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+          </div>
+        </div>
+        <div class="search_popup_bottom">
+          <p class="search_popup_subtitle">인기 검색어</p>
+          <ul class="wrap">
+            <li>
+              <button type="button" class="btn_search_delete">
+              <a href="./sub_page.html">#유네스코
+                <i class="fa-solid fa-xmark"></i>
+              </a>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="btn_search_delete">
+              <a href="./sub_page.html">#액티비티
+                <i class="fa-solid fa-xmark"></i>
+              </a>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="btn_search_delete">
+              <a href="./sub_page.html">#반려동물
+                <i class="fa-solid fa-xmark"></i>
+              </a>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="btn_search_delete">
+              <a href="./sub_page.html">#비오는 날
+                <i class="fa-solid fa-xmark"></i>
+              </a>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="btn_search_delete">
+              <a href="./sub_page.html">#오름
+                <i class="fa-solid fa-xmark"></i>
+              </a>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <header class="header">
+      <div class="logo">
+        <img src="./images/Mobile버전/logo_mobile.jpg" alt="로고이미지">
+      </div>
+      <nav class="gnb_outer_pc">
+        <ul class="gnb_menu">
+          <li>추천</li>
+          <li>K-PICK</li>
+          <li>놀멍</li>
+          <li>오름길</li>
+          <li>소식통</li>
+        </ul>
+      </nav>
+      <div class="btn">
+        <div class="search_box">
+          <input type="search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <button type="button" class="weather_btn"><img src="./images/Mobile버전/weather_popup/popup_weather01_mobile.png" alt="">27&deg;</button>
+        <button type="button" class="search_btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <button type="button" id="menu_btn"><i class="fa-solid fa-bars"></i></button>
+        <button type="button" class="font_size_btn">가</button>
+        <!-- 폰트사이즈 -->
+        <button type="button" id="user_btn"><a href="./login.html"><i class="fa-regular fa-user"></i></a></button>
+        <!-- 로그인 등 -->
+        <button type="button" class="language_btn"><i class="fa-solid fa-globe"></i></button>
+        <!-- 서치팝업 -->
+      </div>
+    </header>
+
+    <div class="wing_outer_mobile">
+      <div class="wing_banner">
+        <div class="wing_header">
+          <div class="logo">
+            <img src="./images/Mobile버전/logo_mobile.jpg" alt="로고 이미지">
+            <button type="button" class="close"><i class="fa-solid fa-xmark"></i></button>
+          </div>
+          <div class="user_btn">
+            <button type="button"><a href="./login.html">로그인</a></button>
+            <button type="button">마이페이지</button>
+            <select>KOR
+            <option>KOR</option>
+            <option>ENG</option>
+            <option>CHI</option>
+            </select>
+          </div>
+        </div>
+        <input type="checkbox" id="chk01">
+        <input type="checkbox" id="chk02">
+        <input type="checkbox" id="chk03">
+        <input type="checkbox" id="chk04">
+        <input type="checkbox" id="chk05">
+        <div class="label_box01">
+          <label for="chk01">제주놀멍<i class="fa-solid fa-angle-down"></i></label>
+        </div>
+        <ul class="wing_box01">
+          <li><a href="./sub_page.html">지금 제주는</a></li>
+          <li><a href="./sub_page.html">제주 관광지</a></li>
+          <li><a href="./sub_page.html">음식</a></li>
+          <li><a href="./sub_page.html">숙박</a></li>
+          <li><a href="./sub_page.html">쇼핑</a></li>
+        </ul>
+        <div class="label_box02">
+          <label for="chk02">AI추천<i class="fa-solid fa-angle-down"></i></label>
+        </div>
+        <ul class="wing_box02">
+          <li><a href="./sub_page.html">추천 여행지</a></li>
+          <li><a href="./sub_page.html">추천 코스</a></li>
+        </ul>
+        <div class="label_box03">
+          <label for="chk03">K-Pick<i class="fa-solid fa-angle-down"></i></label>
+        </div>
+        <ul class="wing_box03">
+          <li><a href="./sub_page.html">Artist-pick</a></li>
+          <li><a href="./sub_page.html">드라마 촬영지</a></li>
+        </ul>
+        <div class="label_box04">
+          <label for="chk04">오름길<i class="fa-solid fa-angle-down"></i></label>
+        </div>
+        <ul class="wing_box04">
+          <li><a href="./sub_page.html">오름길 소개</a></li>
+          <li><a href="./sub_page.html">코스 안내</a></li>
+        </ul>
+        <div class="label_box05">
+          <label for="chk05">제주소식통<i class="fa-solid fa-angle-down"></i></label>
+        </div>
+        <ul class="wing_box05">
+          <li><a href="./sub_page.html">여행 소식</a></li>
+          <li><a href="./sub_page.html">공지</a></li>
+          <li><a href="./sub_page.html">이벤트</a></li>
+          <li><a href="./sub_page.html">관광안내소</a></li>
+          <li><a href="./sub_page.html">교통 정보</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="visual_main_outer mb">
+    <swiper-container
+      class="mySwiper"
+      init="false"
+    >
+      <swiper-slide>
+        <picture class="visual_main">
+          <source media="(min-width : 769px)" srcset="./images/PC버전/visual_main/visual_main01.jpg">
+          <source media="(min-width : 601px)" srcset="./images/Tablet버전/visual_main/visual_main01.jpg">
+          <source media="(min-width : 320px)" srcset="./images/Mobile버전/visual_main/visual_main01.jpg">
+          <img src="./images/PC버전/visual_main/협재해수욕장.jpg" alt="메인배너 기본 이미지">
+        </picture>
+      </swiper-slide>
+      <swiper-slide>
+        <picture class="visual_main">
+          <source media="(min-width : 769px)" srcset="./images/PC버전/visual_main/visual_main02.jpg">
+          <source media="(min-width : 601px)" srcset="./images/Tablet버전/visual_main/visual_main02.jpg">
+          <source media="(min-width : 320px)" srcset="./images/Mobile버전/visual_main/visual_main02.jpg">
+          <img src="./images/Mobile버전/visual_main/visual_main02.jpg" alt="메인배너 기본 이미지">
+        </picture>
+      </swiper-slide>
+      <swiper-slide>
+        <picture class="visual_main">
+          <source media="(min-width : 769px)" srcset="./images/PC버전/visual_main/visual_main03.jpg">
+          <source media="(min-width : 601px)" srcset="./images/Tablet버전/visual_main/visual_main03.jpg">
+          <source media="(min-width : 320px)" srcset="./images/Mobile버전/visual_main/visual_main03.jpg">
+          <img src="./images/Mobile버전/visual_main/visual_main03.jpg" alt="메인배너 기본 이미지">
+        </picture>
+      </swiper-slide>
+      <swiper-slide>
+        <picture class="visual_main">
+          <source media="(min-width : 769px)" srcset="./images/PC버전/visual_main/visual_main04.jpg">
+          <source media="(min-width : 601px)" srcset="./images/Tablet버전/visual_main/visual_main04.jpg">
+          <source media="(min-width : 320px)" srcset="./images/Mobile버전/visual_main/visual_main04.jpg">
+          <img src="./images/Mobile버전/visual_main/visual_main04.jpg" alt="메인배너 기본 이미지">
+        </picture>
+      </swiper-slide>
+    </swiper-container>
+  </div>
+  <div class="metapo_outer">
+    <div class="metapo">
+      <a href="./sub_page.html">
+        <img src="./images/Mobile버전/metapo/metapo01_mobile.jpg" alt="메타포01이미지">
+        <p>AI추천</p>
+      </a>
+    </div>
+    <div class="metapo">
+      <a href="./sub_page.html">
+        <img src="./images/Mobile버전/metapo/metapo02_mobile.jpg" alt="메타포02이미지">
+        <p>K-Pick</p>
+      </a>
+    </div>
+    <div class="metapo">
+      <a href="./sub_page.html">
+        <img src="./images/Mobile버전/metapo/metapo03_mobile.jpg" alt="메타포03이미지">
+        <p>축제&#8901행사</p>
+      </a>
+    </div>
+    <div class="metapo">
+      <a href="./sub_page.html">
+        <img src="./images/Mobile버전/metapo/metapo04_mobile.jpg" alt="메타포04이미지">
+        <p>오름길</p></a>
+    </div>
+    <div class="metapo_tablet">
+      <a href="./sub_page.html">
+        <img src="./images/Tablet버전/metapo/metapo01_tablet.jpg" alt="메타포01이미지">
+        <p>AI추천</p></a>
+    </div>
+    <div class="metapo_tablet">
+      <a href="./sub_page.html">
+        <img src="./images/Tablet버전/metapo/metapo02_tablet.jpg" alt="메타포02이미지">
+        <p>K-Pick</p></a>
+    </div>
+    <div class="metapo_tablet">
+      <a href="./sub_page.html">
+        <img src="./images/Tablet버전/metapo/metapo03_tablet.jpg" alt="메타포03이미지">
+        <p>축제&#8901행사</p></a>
+    </div>
+    <div class="metapo_tablet">
+      <a href="./sub_page.html">
+        <img src="./images/Tablet버전/metapo/metapo04_tablet.jpg" alt="메타포04이미지">
+        <p>오름길</p></a>
+    </div>
+    <div class="metapo_tablet">
+      <a href="./sub_page.html">
+        <img src="./images/Tablet버전/metapo/metapo05_tablet.jpg" alt="메타포05이미지">
+        <p>명소</p></a>
+    </div>
+    <div class="metapo_tablet">
+      <a href="./sub_page.html">
+        <img src="./images/Tablet버전/metapo/metapo06_tablet.jpg" alt="메타포06이미지">
+        <p>맛집</p></a>
+    </div>
+    <div class="metapo_tablet">
+      <a href="./sub_page.html">
+        <img src="./images/Tablet버전/metapo/metapo07_tablet.jpg" alt="메타포07이미지">
+        <p>교통</p></a>
+    </div>
+    <div class="metapo_tablet">
+      <a href="./sub_page.html">
+        <img src="./images/Tablet버전/metapo/metapo08_tablet.jpg" alt="메타포08이미지">
+        <p>소식통</p></a>
+    </div>
+    <div class="metapo_pc">
+      <a href="./sub_page.html">
+        <img src="./images/PC버전/metapo/metapo01_pc.jpg" alt="메타포01이미지">
+        <p>AI추천</p></a>
+    </div>
+    <div class="metapo_pc">
+      <a href="./sub_page.html">
+        <img src="./images/PC버전/metapo/metapo02_pc.jpg" alt="메타포02이미지">
+        <p>K-Pick</p></a>
+    </div>
+    <div class="metapo_pc">
+      <a href="./sub_page.html">
+        <img src="./images/PC버전/metapo/metapo03_pc.jpg" alt="메타포03이미지">
+        <p>축제&#8901행사</p></a>
+    </div>
+    <div class="metapo_pc">
+      <a href="./sub_page.html">
+        <img src="./images/PC버전/metapo/metapo04_pc.jpg" alt="메타포04이미지">
+        <p>오름길</p></a>
+    </div>
+    <div class="metapo_pc">
+      <a href="./sub_page.html">
+        <img src="./images/PC버전/metapo/metapo05_pc.jpg" alt="메타포05이미지">
+        <p>명소</p></a>
+    </div>
+    <div class="metapo_pc">
+      <a href="./sub_page.html">
+        <img src="./images/PC버전/metapo/metapo06_pc.jpg" alt="메타포06이미지">
+        <p>맛집</p></a>
+    </div>
+    <div class="metapo_pc">
+      <a href="./sub_page.html">
+        <img src="./images/PC버전/metapo/metapo07_pc.jpg" alt="메타포07이미지">
+        <p>교통</p></a>
+    </div>
+    <div class="metapo_pc">
+      <a href="./sub_page.html">
+        <img src="./images/PC버전/metapo/metapo08_pc.jpg" alt="메타포08이미지">
+        <p>소식통</p></a>
+    </div>
+  </div>
+  
+  <section class="contents01_outer mb">
+    <div class="contents_title_outer">
+      <span>AI추천</span>
+      <div class="contents_title">
+        <p>제주 여행 코스</p>
+        <span class="more"><a href="./sub_page.html">더보기+</a></span>
+      </div>
+    </div>
+    <input type="radio" id="tab01" name="ai" checked>
+    <input type="radio" id="tab02" name="ai">
+    <input type="radio" id="tab03" name="ai">
+    <input type="radio" id="tab04" name="ai">
+    <div class="tab_outer">
+      <label for="tab01" class="tab01">#유네스코</label>
+      <label for="tab02" class="tab02">#액티비티</label>
+      <label for="tab03" class="tab03">#반려동물</label>
+      <label for="tab04" class="tab04">#비오는 날</label>
+    </div>
+    <div class="contents01_box01">
+      <button class="heart" type="button"><i class="fa-solid fa-heart"></i></button>
+      <div class="contents_left">
+        <img src="./images/PC버전/AI추천_main/ai01.jpg" alt="ai코스 이미지01">
+        <img src="./images/PC버전/AI추천_main/ai02.jpg" alt="ai코스 이미지02">
+        <img src="./images/PC버전/AI추천_main/ai03.jpg" alt="ai코스 이미지03">
+        <img src="./images/PC버전/AI추천_main/ai04.jpg" alt="ai코스 이미지04">
+        <div class="contents_middle">
+          <div class="line"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+        </div>
+      </div>
+      <div class="contents_right">
+        <p class="contents_place">섭지코지</p>
+        <div class="contents_text">
+          <p>사진 촬영</p>
+          <p>입장료 : 1인 1만원</p>
+          <p>차량이동 15분</p>
+        </div>
+        <p class="contents_place">제주당</p>
+        <div class="contents_text">
+          <p>식사</p>
+          <p>식사비용 : 5~6만원</p>
+          <p>차량이동 20분</p>
+        </div>
+        <p class="contents_place">새별오름</p>
+        <div class="contents_text">
+          <p>산책</p>
+          <p>비용 : 없음</p>
+          <p>이동 :유동적</p>
+        </div>
+        <p class="contents_place">새별오름</p>
+        <div class="contents_text">
+          <p>일몰</p>
+        </div>
+      </div>
+      <div class="illust_outer">
+        <img src="./images/Mobile버전/AI추천_main/illust/illust.png" alt="일러스트">
+      </div>
+    </div>
+    <div class="contents01_box02">
+      <button type="button" class="heart"><i class="fa-solid fa-heart"></i></button>
+      <div class="contents_left">
+        <img src="./images/PC버전/AI추천_main/ai01.jpg" alt="ai코스 이미지01">
+        <img src="./images/PC버전/AI추천_main/ai02.jpg" alt="ai코스 이미지02">
+        <img src="./images/PC버전/AI추천_main/ai03.jpg" alt="ai코스 이미지03">
+        <img src="./images/PC버전/AI추천_main/ai04.jpg" alt="ai코스 이미지04">
+        <div class="contents_middle">
+          <div class="line"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+        </div>
+      </div>
+      <div class="contents_right">
+        <p class="contents_place">섭지코지</p>
+        <div class="contents_text">
+          <p>사진 촬영</p>
+          <p>입장료 : 1인 1만원</p>
+          <p>차량이동 15분</p>
+        </div>
+        <p class="contents_place">제주당</p>
+        <div class="contents_text">
+          <p>식사</p>
+          <p>식사비용 : 5~6만원</p>
+          <p>차량이동 20분</p>
+        </div>
+        <p class="contents_place">새별오름</p>
+        <div class="contents_text">
+          <p>산책</p>
+          <p>비용 : 없음</p>
+          <p>이동 :유동적</p>
+        </div>
+        <p class="contents_place">새별오름</p>
+        <div class="contents_text">
+          <p>일몰</p>
+        </div>
+      </div>
+      <div class="illust_outer">
+        <img src="./images/Mobile버전/AI추천_main/illust/illust.png" alt="일러스트">
+      </div>
+    </div>
+    <div class="contents01_box03">
+      <button type="button" class="heart"><i class="fa-solid fa-heart"></i></button>
+      <div class="contents_left">
+        <img src="./images/PC버전/AI추천_main/ai01.jpg" alt="ai코스 이미지01">
+        <img src="./images/PC버전/AI추천_main/ai02.jpg" alt="ai코스 이미지02">
+        <img src="./images/PC버전/AI추천_main/ai03.jpg" alt="ai코스 이미지03">
+        <img src="./images/PC버전/AI추천_main/ai04.jpg" alt="ai코스 이미지04">
+        <div class="contents_middle">
+          <div class="line"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+        </div>
+      </div>
+      <div class="contents_right">
+        <p class="contents_place">섭지코지</p>
+        <div class="contents_text">
+          <p>사진 촬영</p>
+          <p>입장료 : 1인 1만원</p>
+          <p>차량이동 15분</p>
+        </div>
+        <p class="contents_place">제주당</p>
+        <div class="contents_text">
+          <p>식사</p>
+          <p>식사비용 : 5~6만원</p>
+          <p>차량이동 20분</p>
+        </div>
+        <p class="contents_place">새별오름</p>
+        <div class="contents_text">
+          <p>산책</p>
+          <p>비용 : 없음</p>
+          <p>이동 :유동적</p>
+        </div>
+        <p class="contents_place">새별오름</p>
+        <div class="contents_text">
+          <p>일몰</p>
+        </div>
+      </div>
+      <div class="illust_outer">
+        <img src="./images/Mobile버전/AI추천_main/illust/illust.png" alt="일러스트">
+      </div>
+    </div>
+    <div class="contents01_box04">
+      <button type="button" class="heart"><i class="fa-solid fa-heart"></i></button>
+      <div class="contents_left">
+        <img src="./images/PC버전/AI추천_main/ai01.jpg" alt="ai코스 이미지01">
+        <img src="./images/PC버전/AI추천_main/ai02.jpg" alt="ai코스 이미지02">
+        <img src="./images/PC버전/AI추천_main/ai03.jpg" alt="ai코스 이미지03">
+        <img src="./images/PC버전/AI추천_main/ai04.jpg" alt="ai코스 이미지04">
+        <div class="contents_middle">
+          <div class="line"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+        </div>
+      </div>
+      <div class="contents_right">
+        <p class="contents_place">섭지코지</p>
+        <div class="contents_text">
+          <p>사진 촬영</p>
+          <p>입장료 : 1인 1만원</p>
+          <p>차량이동 15분</p>
+        </div>
+        <p class="contents_place">제주당</p>
+        <div class="contents_text">
+          <p>식사</p>
+          <p>식사비용 : 5~6만원</p>
+          <p>차량이동 20분</p>
+        </div>
+        <p class="contents_place">새별오름</p>
+        <div class="contents_text">
+          <p>산책</p>
+          <p>비용 : 없음</p>
+          <p>이동 :유동적</p>
+        </div>
+        <p class="contents_place">새별오름</p>
+        <div class="contents_text">
+          <p>일몰</p>
+        </div>
+      </div>
+      <div class="illust_outer">
+        <img src="./images/Mobile버전/AI추천_main/illust/illust.png" alt="일러스트">
+      </div>
+    </div>
+  </section>
+
+
+  <section class="contents02_outer mb">
+    <div class="contents_title">
+    <p>K-Artist Pick</p>
+    <span class="more"><a href="./sub_page.html">더보기+</a></span>
+    </div>
+    <div class="contents02_box_outer">
+      <div class="contents02_box">
+        <img src="./images/PC버전/K-Artist_main/k-artist_오라동 메밀밭_yj.jpg" alt="오라동 메밀밭 이미지">
+        <div class="artist_box">
+          <img src="./images/PC버전/K-Artist_main/k-artist_아이유_yj.jpg" alt="아이유 이미지">
+          <p>아이유's pick</p>
+        </div>
+        <div class="text_box">
+          <div class="linear_gradient1">
+            <div class="text">
+              <button type="button" class="heart"><i class="fa-solid fa-heart"></i></button>
+              <p>성산일출봉</p>
+              <p>성산일출봉은 제주도의 다른 오름들과는 달리 마그마가 물속에서 분출하면서 만들어진 수성 화산체다. 화산활동 시 분출된 뜨거운 마그마가 차가운 바닷물과 만나면서 화산재가 습기를 많이 머금어 끈끈한 성질을 띄게 되었고, 이것이 층을 이루면서 쌓인 것이 성산일출봉이다.
+
+              바다 근처의 퇴적층은 파도와 해류에 의해 침식되면서 지금처럼 경사가 가파른 모습을 띄게 되었다. 생성 당시엔 제주 본토와 떨어진 섬이었는데, 주변에 모래와 자갈 등이 쌓이면서 간조 때면 본토와 이어지는 길이 생겼고, 1940년엔 이곳에 도로가 생기면서 현재는 육지와 완벽하게 연결되어 있다.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contents02_box">
+        <img src="./images/PC버전/K-Artist_main/k-artist_금능해수욕장_소유_yj.jpg" alt="금능해수욕장 이미지">
+        <div class="artist_box">
+          <img src="./images/PC버전/K-Artist_main/k-artist_소유_yj.jpg" alt="소유 이미지">
+          <p>소유's pick</p>
+        </div>
+        <div class="text_box">
+          <div class="linear_gradient1">
+            <div class="text">
+              <button type="button" class="heart"><i class="fa-solid fa-heart"></i></button>
+              <p>금능해수욕장</p>
+              <p>  바닥이 훤히 비치는 투명한 물빛과 바닷물이 찰박거리는 얕은 수심, 물놀이 후 따뜻하게 즐기는 온수 샤워까지. 아이들과 다녀오기에 최적의 조건을 갖춘 해수욕장을 찾는다면 금능해수욕장이 제격이다. 
+
+              제주시 한림읍에 위치한 금능해수욕장은 서쪽의 인기 명소인 협재해수욕장과 바로 이어져 있다. 파란 물감을 풀어놓은 것 같은 바다부터 생김새가 귀여운 비양도, 촉감이 보슬거리는 모래사장까지 이웃한 해변과 비슷한 풍경을 품고 있지만 그보다 사람이 붐비지 않아 여유로운 것이 매력이다. 더구나 주차장과 해변이 바로 연결되어 있어 짐을 옮길 때도 부담이 없다. 새로 신축된 샤워실은 온수 샤워가 가능해 해수욕장 이용에 편리함을 갖췄다.
+
+              어린 아이들과 이 곳을 방문할 땐 물이 빠지는 간조 시간에 맞춰 가기를 추천한다. 바닷물이 멀리까지 빠지면 넓고 고운 모래사장이 드러난다. 곳곳에 수심이 얕고 어린 아이도 놀기 좋은 천연 풀장이 만들어진다. 빠져나간 바닷물이 남겨 놓은 해조류나 작은 보말 등은 자연스럽게 아이들의 장난감이 된다. 덕분에 아무런 준비 없이 찾아도 재미있게 즐길 수 있다.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contents02_box">
+        <img src="./images/PC버전/K-Artist_main/k-artist_스누피가든_지민_yj.jpg" alt="스누피가든 이미지">
+        <div class="artist_box">
+          <img src="./images/PC버전/K-Artist_main/k-artist_지민_yj.jpg" alt="아이유 이미지">
+          <p>지민's pick</p>
+        </div>
+        <div class="text_box">
+          <div class="linear_gradient1">
+            <div class="text">
+              <button type="button" class="heart"><i class="fa-solid fa-heart"></i></button>
+              <p>스누피가든</p>
+              <p>스누피 가든은 50년간 전세계 신문, 방송을 통해 연재된 만화 ‘피너츠’를 테마로, 1천여평의 실내 테마홀과 2만5천여평의 야외 가든으로 구성된 자연형 체험 테마 가든이다. 자연과 인간의 조화와 균형을 중요하게 생각하는 에스앤가든의 철학을 담은 곳으로, 삶과 자연의 균형을 맞추는 특별한 인생 가드너 스누피가 있다.
+
+              스누피는 우리의 바쁜 일상 속에서도 ‘일단 오늘 오후는 쉬자’고 말하며 여유와 휴식을 찾도록 도와준다. 피너츠 친구들을 통해 꽃과 나무 등 자연을 가꾸는 것 뿐만 아니라 인생을 아름답게 가꿀 수 있는 피너츠의 메세지와 철학을 스누피 가든을 통해 느껴보자.
+
+              매주 수요일은 반려동물데이로 운영되고 있다. 반려동물 동반 티켓 구매 시 입장 가능하며 실내는 케이지나 개모차를 이용해야 한다. 
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contents02_box">
+        <img src="./images/PC버전/K-Artist_main/k-artist_촌촌해녀촌_성시경_yj.jpg" alt="촌촌해녀촌 이미지">
+        <div class="artist_box">
+          <img src="./images/PC버전/K-Artist_main/k-artist_성시경_yj.jpg" alt="성시경 이미지">
+          <p>성시경's pick</p>
+        </div>
+        <div class="text_box">
+          <div class="linear_gradient1">
+            <div class="text">
+              <button type="button" class="heart"><i class="fa-solid fa-heart"></i></button>
+              <p>촌촌해녀촌</p>
+              <p>두툼한 회를 얹은 회국수 원조집.
+                중면 위에 탱탱하고 두툼한 회와 빨간 양념소스가 침샘을 자극하는 비주얼, 큰 접시 가득한 푸짐한 양과 제주도치고도 무척 저렴한 가격이 매력 포인트인 해녀촌의 회국수. 동복리에 위치한 이곳은 제주도 회국수의 원조로 통한다.
+
+                침을 꼴깍 삼키며 왼쪽으로 비비고 오른쪽으로 비벼 놓으면 이걸 언제 다 먹을까 하고 자못 걱정이 될 정도의 양이지만 홀린 듯이 분주하게 젓가락질을 하다 보면 텅 빈 접시만 남게 된다.
+
+                음식점 앞의 수족관에는 잿방어나 광어 등 제 철 활어들이 노닐고 있는데 당연한 얘기겠지만 해녀촌의 회국수 위에 올라가는 횟감들은 계절에 따라 달라진다.
+
+
+                굵직한 중면을 삶아 성게로 국물을 내 그 위에 노르스름한 성게알을 듬뿍 얹어 따뜻하게 내놓은 성게국수도 성게 특유의 고소하면서도 쌉쌀한 바다의 맛이 고스란히 담겨있는 별미. 바닷가에 있어 파도소리를 들으며 식사를 할 수 있는 것도 매력 포인트.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contents02_box">
+        <img src="./images/PC버전/K-Artist_main/k-artist_서황_이효리_yj.jpg" alt="서황이미지">
+        <div class="artist_box">
+          <img src="./images/PC버전/K-Artist_main/k-artist_이효리_yj.jpg" alt="이효리 이미지">
+          <p>이효리's pick</p>
+        </div>
+        <div class="text_box">
+          <div class="linear_gradient1">
+            <div class="text">
+              <button type="button" class="heart"><i class="fa-solid fa-heart"></i></button>
+              <p>서황</p>
+              <p>겉바속촉의 매력적인 돈까스전문점.
+                제주시 애월읍에 위치한 돈까스 전문점인 돈카츠서황은 겉은 바삭하고 속은 촉촉한 매력적인 튀김요리들이 준비되어 있다. 그 중에서 제주 흑돼지 등심과 안심을 사용하여 만든 서황카츠, 흑돼지의 부드러운 안심만으로 만든 안심카츠, 제주 바다의 자연산 생선과 새우를 튀긴 생선카츠, 새우튀김이 돈카츠서황의 대표메뉴이다. 이 외에도 흑돼지 안심카츠, 생선카츠, 새우튀김을 같이 즐길 수 있는 모듬카츠, 신선한 샐러드와 새우, 쫄깃한 우동을 국내산 참깨로 만든 드래싱과 함께 비벼 먹을 수 있는 샐러드우동도 있어 다양한 음식들을 함께 즐길 수 있다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page">
+      <button type="button" class="prev"><i class="fi fi-rr-angle-left"></i></button>
+      <p class="now">1</p>
+      <p>/</p>
+      <p>5</p>
+      <button type="button" class="next"><i class="fi fi-rr-angle-right"></i></button>
+    </div>
+  </section>
+
+  <section class="contents03_outer mb">
+    <div class="contents03">
+      <div class="contents_title">
+        <p>지금 우리 제주는</p>
+        <span class="more"><a href="./sub_page.html">더보기+</a></span>
+      </div>
+      <div class="festival_list">
+        <div class="festival">
+          <div class="contents03_bg">
+            <div class="text">
+              <p class="festival_text01">야간행사</p>
+            </div>
+          </div>
+          <picture>
+            <source media="(min-width:769px)" srcset="./images/PC버전/지금제주는_main/festivities_img21_pc.jpg">
+            <source media="(min-width:601px)" srcset="./images/Tablet버전/지금제주는_main/festivities_img21_tablet.jpg">
+            <img src="./images/Mobile버전/지금제주는_main/festivities_img21_mobile.jpg" alt="지금제주는 기본이미지">
+        </div>
+        <div class="festival">
+          <div class="contents03_bg">
+            <div class="text">
+              <p class="festival_text02">체험관광</p>
+            </div></div>
+          <picture>
+            <source media="(min-width:769px)" srcset="./images/PC버전/지금제주는_main/festivities_img02_pc.jpg">
+            <source media="(min-width:601px)" srcset="./images/Tablet버전/지금제주는_main/festivities_img02_tablet.jpg">
+            <img src="./images/Mobile버전/지금제주는_main/festivities_img02_mobile.jpg" alt="지금제주는 기본이미지">
+        </div>
+        <div class="festival">
+          <div class="contents03_bg">
+            <div class="text">
+              <p class="festival_text03">페스티벌</p>
+            </div>
+          </div>
+          <picture>
+            <source media="(min-width:769px)" srcset="./images/PC버전/지금제주는_main/festivities_img10_pc.jpg">
+            <source media="(min-width:601px)" srcset="./images/Tablet버전/지금제주는_main/festivities_img10_tablet.jpg">
+            <img src="./images/Mobile버전/지금제주는_main/festivities_img10_mobile.jpg" alt="지금제주는 기본이미지">
+        </div>
+        <div class="festival">
+          <div class="contents03_bg">
+            <div class="text">
+              <p class="festival_text04">뮤지컬</p>
+            </div>
+          </div>
+          <picture>
+            <source media="(min-width:769px)" srcset="./images/PC버전/지금제주는_main/festivities_img13_pc.jpg">
+            <source media="(min-width:601px)" srcset="./images/Tablet버전/지금제주는_main/festivities_img13_tablet.jpg">
+            <img src="./images/Mobile버전/지금제주는_main/festivities_img13_mobile.jpg" alt="지금제주는 기본이미지">
+        </div>
+        <div class="festival">
+          <div class="contents03_bg">
+            <div class="text">
+              <p class="festival_text05">세계유산</p>
+            </div>
+          </div>
+          <picture>
+            <source media="(min-width:769px)" srcset="./images/PC버전/지금제주는_main/festivities_img15_pc.jpg">
+            <source media="(min-width:601px)" srcset="./images/Tablet버전/지금제주는_main/festivities_img15_tablet.jpg">
+            <img src="./images/Mobile버전/지금제주는_main/festivities_img15_mobile.jpg" alt="지금제주는 기본이미지">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="contents04_outer mb">
+    <div class="popup_bg"></div>
+    <div class="contents04">
+      <div class="contents_title">
+        <p>오름길</p>
+        <span class="more"><a href="./sub_page.html">더보기+</a></span>
+      </div>
+      <input type="radio" name="gender" id="course_tab01" checked>
+      <input type="radio" name="gender" id="course_tab02">
+      <input type="radio" name="gender" id="course_tab03">
+      <input type="radio" name="gender" id="course_tab04">
+      <div class="tab_outer">
+        <label for="course_tab01" class="course_tab01">1코스</label>
+        <label for="course_tab02" class="course_tab02">2코스</label>
+        <label for="course_tab03" class="course_tab03">3코스</label>
+        <label for="course_tab04" class="course_tab04">4코스</label>
+      </div>
+      <div class="contents04_box01">
+        <picture class="map">
+          <source media="(min-width:769px)" srcset="./images/PC버전/올레길/map01_pc.jpg">
+          <source media="(min-width:601px)" srcset="./images/Tablet버전/올레길/map01_tablet.jpg">
+          <img src="./images/Mobile버전/올레길/map01_mobile.jpg" alt="오름길01 기본이미지">
+          <button type="button" class="facilities_toilet_open">
+            <i class="fa-solid fa-restroom toilet"></i>
+          </button>
+          <button type="button" class="facilities_parking_open">
+            <i class="fa-solid fa-square-parking"></i>
+          </button>
+        </picture>
+        <div class="facilities_toilet_popup">
+          <img src="./images/PC버전/오름길_main/오름길_03_pc_화장실.jpg" alt="오름길 화장실 이미지01">
+          <i class="fa-solid fa-xmark facilities_toilet_close"></i>
+          <div class="facilities_text_box">
+            <p class="facilities_title">공중화장실</p>
+            <div class="facilities_detail">
+              <div class="facilities_detail_left">
+                <p>거리(내 위치 기준)</p>
+                <p>시설정보</p>
+                <p>전화번호</p>
+              </div>
+              <div class="facilities_detail_right">
+                <p>540m</p>
+                <p>여자3칸, 남자3칸</p>
+                <p>010-0000-0000</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="facilities_parking_popup">
+          <img src="./images/PC버전/오름길_main/오름길_01_pc_주차장.jpg" alt="오름길 주차장 이미지01">
+          <i class="fa-solid fa-xmark facilities_parking_close"></i>
+          <div class="facilities_text_box">
+            <p class="facilities_title">주차장</p>
+            <div class="facilities_detail">
+              <div class="facilities_detail_left">
+                <p>거리(내 위치 기준)</p>
+                <p>시설정보</p>
+                <p>전화번호</p>
+              </div>
+              <div class="facilities_detail_right">
+                <p>100m</p>
+                <p>100대 주차 가능</p>
+                <p>010-0000-0000</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contents04_box02">
+        <picture class="map">
+          <source media="(min-width:769px)" srcset="./images/PC버전/올레길/map02_pc.jpg">
+          <source media="(min-width:601px)" srcset="./images/Tablet버전/올레길/map02_tablet.jpg">
+          <img src="./images/Mobile버전/올레길/map02_mobile.jpg" alt="오름길02 기본이미지">
+          <button type="button" class="facilities_toilet_open">
+            <i class="fa-solid fa-restroom toilet"></i>
+          </button>
+          <button type="button" class="facilities_parking_open">
+            <i class="fa-solid fa-square-parking"></i>
+          </button>
+        </picture>
+        <div class="facilities_toilet_popup">
+          <img src="./images/PC버전/오름길_main/오름길_04_pc_화장실.jpg" alt="오름길 화장실 이미지01">
+          <i class="fa-solid fa-xmark facilities_toilet_close"></i>
+          <div class="facilities_text_box">
+            <p class="facilities_title">공중화장실</p>
+            <div class="facilities_detail">
+              <div class="facilities_detail_left">
+                <p>거리(내 위치 기준)</p>
+                <p>시설정보</p>
+                <p>전화번호</p>
+              </div>
+              <div class="facilities_detail_right">
+                <p>540m</p>
+                <p>여자3칸, 남자3칸</p>
+                <p>010-0000-0000</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="facilities_parking_popup">
+          <img src="./images/PC버전/오름길_main/오름길_02_pc_주차장.jpg" alt="오름길 주차장 이미지01">
+          <i class="fa-solid fa-xmark facilities_parking_close"></i>
+          <div class="facilities_text_box">
+            <p class="facilities_title">주차장</p>
+            <div class="facilities_detail">
+              <div class="facilities_detail_left">
+                <p>거리(내 위치 기준)</p>
+                <p>시설정보</p>
+                <p>전화번호</p>
+              </div>
+              <div class="facilities_detail_right">
+                <p>100m</p>
+                <p>100대 주차 가능</p>
+                <p>010-0000-0000</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contents04_box03">
+        <picture class="map">
+          <source media="(min-width:769px)" srcset="./images/PC버전/올레길/map03_pc.jpg">
+          <source media="(min-width:601px)" srcset="./images/Tablet버전/올레길/map03_tablet.jpg">
+          <img src="./images/Mobile버전/올레길/map03_mobile.jpg" alt="오름길03 기본이미지">
+          <button type="button" class="facilities_toilet_open">
+            <i class="fa-solid fa-restroom toilet"></i>
+          </button>
+          <button type="button" class="facilities_parking_open">
+            <i class="fa-solid fa-square-parking"></i>
+          </button>
+        </picture>
+        <div class="facilities_toilet_popup">
+          <img src="./images/PC버전/오름길_main/오름길_03_pc_화장실.jpg" alt="오름길 화장실 이미지01">
+          <i class="fa-solid fa-xmark facilities_toilet_close"></i>
+          <div class="facilities_text_box">
+            <p class="facilities_title">공중화장실</p>
+            <div class="facilities_detail">
+              <div class="facilities_detail_left">
+                <p>거리(내 위치 기준)</p>
+                <p>시설정보</p>
+                <p>전화번호</p>
+              </div>
+              <div class="facilities_detail_right">
+                <p>540m</p>
+                <p>여자3칸, 남자3칸</p>
+                <p>010-0000-0000</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="facilities_parking_popup">
+          <img src="./images/PC버전/오름길_main/오름길_01_pc_주차장.jpg" alt="오름길 주차장 이미지01">
+          <i class="fa-solid fa-xmark facilities_parking_close"></i>
+          <div class="facilities_text_box">
+            <p class="facilities_title">주차장</p>
+            <div class="facilities_detail">
+              <div class="facilities_detail_left">
+                <p>거리(내 위치 기준)</p>
+                <p>시설정보</p>
+                <p>전화번호</p>
+              </div>
+              <div class="facilities_detail_right">
+                <p>100m</p>
+                <p>100대 주차 가능</p>
+                <p>010-0000-0000</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contents04_box04">
+        <picture class="map">
+          <source media="(min-width:769px)" srcset="./images/PC버전/올레길/map04_pc.jpg">
+          <source media="(min-width:601px)" srcset="./images/Tablet버전/올레길/map04_tablet.jpg">
+          <img src="./images/Mobile버전/올레길/map04_mobile.jpg" alt="오름길04 기본이미지">
+          <button type="button" class="facilities_toilet_open">
+            <i class="fa-solid fa-restroom toilet"></i>
+          </button>
+          <button type="button" class="facilities_parking_open">
+            <i class="fa-solid fa-square-parking"></i>
+          </button>
+        </picture>
+        <div class="facilities_toilet_popup">
+          <img src="./images/PC버전/오름길_main/오름길_04_pc_화장실.jpg" alt="오름길 화장실 이미지01">
+          <i class="fa-solid fa-xmark facilities_toilet_close"></i>
+          <div class="facilities_text_box">
+            <p class="facilities_title">공중화장실</p>
+            <div class="facilities_detail">
+              <div class="facilities_detail_left">
+                <p>거리(내 위치 기준)</p>
+                <p>시설정보</p>
+                <p>전화번호</p>
+              </div>
+              <div class="facilities_detail_right">
+                <p>540m</p>
+                <p>여자3칸, 남자3칸</p>
+                <p>010-0000-0000</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="facilities_parking_popup">
+          <img src="./images/PC버전/오름길_main/오름길_02_pc_주차장.jpg" alt="오름길 주차장 이미지01">
+          <i class="fa-solid fa-xmark facilities_parking_close"></i>
+          <div class="facilities_text_box">
+            <p class="facilities_title">주차장</p>
+            <div class="facilities_detail">
+              <div class="facilities_detail_left">
+                <p>거리(내 위치 기준)</p>
+                <p>시설정보</p>
+                <p>전화번호</p>
+              </div>
+              <div class="facilities_detail_right">
+                <p>100m</p>
+                <p>100대 주차 가능</p>
+                <p>010-0000-0000</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="contents05_outer">
+    <div class="contents_title">
+      <p>제주 생생소식통</p>
+      <span class="more"><a href="./sub_page.html">더보기+</a></span>
+    </div>
+    <div class="contents05_box mb">
+      <ul class="slide">
+        <li><a href="https://www.youtube.com/embed/hZObjTVVQSE" target="_blank"><img src="./images/sns/sns01.jfif" alt="sns01이미지"></a></li>
+        <li><a href="https://www.youtube.com/embed/RXfCdUcQRtk" target="_blank"><img src="./images/sns/sns02.jfif" alt="sns02이미지"></a></li>
+        <li><a href="https://www.youtube.com/embed/2fdGGP_s98w" target="_blank"><img src="./images/sns/sns03.jfif" alt="sns03이미지"></a></li>
+        <li><a href="https://www.youtube.com/embed/9HvgusqL3LU" target="_blank"><img src="./images/sns/sns04.jfif" alt="sns04이미지"></a></li>
+        <li><a href="https://www.youtube.com/embed/r8rPrbg8mLA" target="_blank"><img src="./images/sns/sns05.jfif" alt="sns05이미지"></a></li>
+        <li><a href="https://www.youtube.com/embed/_YGGok5V-p4" target="_blank"><img src="./images/sns/sns06.jfif" alt="sns06이미지"></a></li>
+        <li><a href="https://www.youtube.com/embed/i3_gKYIc0ME" target="_blank"><img src="./images/sns/sns07.jfif" alt="sns07이미지"></a></li>
+        <li><a href="https://www.youtube.com/embed/dtNGCHAM7aw" target="_blank"><img src="./images/sns/sns08.jfif" alt="sns08이미지"></a></li>
+        <li><a href="https://www.youtube.com/embed/sXxIhgGvyZM?enablejsapi" target="_blank"><img src="./images/sns/sns09.jfif" alt="sns09이미지"></a></li>
+        <li><a href="https://www.youtube.com/embed/AaeCrwPXI70" target="_blank"><img src="./images/sns/sns10.jfif" alt="sns10이미지"></a></li>
+        <li><a href="https://www.youtube.com/shorts/nnknDxA_SIM?feature=share" target="_blank"><img src="./images/sns/sns11.jfif" alt="sns11이미지"></a></li>
+      </ul>
+    </div>
+  </section>
+  <div class="footer_outer">
+    <footer class="footer">
+      <div class="footer_top">
+        <ul>
+          <li>
+            <img src="./images/footer/footer01.jpg" alt="푸터이미지01">
+          </li>
+          <li>
+            <img src="./images/footer/footer02.jpg" alt="푸터이미지02">
+          </li>
+          <li>
+            <img src="./images/footer/footer03.jpg" alt="푸터이미지03">
+          </li>
+          <li>
+            <img src="./images/footer/footer04.jpg" alt="푸터이미지04">
+          </li>
+          <li>
+            <img src="./images/footer/footer05.jpg" alt="푸터이미지05">
+          </li>
+          <li>
+            <img src="./images/footer/footer06.jpg" alt="푸터이미지06">
+          </li>
+          <li>
+            <img src="./images/footer/footer07.jpg" alt="푸터이미지07">
+          </li>
+          <li>
+            <img src="./images/footer/footer08.jpg" alt="푸터이미지08">
+          </li>
+          <li>
+            <img src="./images/footer/footer09.jpg" alt="푸터이미지09">
+          </li>
+                    <li>
+            <img src="./images/footer/footer01.jpg" alt="푸터이미지01">
+          </li>
+          <li>
+            <img src="./images/footer/footer02.jpg" alt="푸터이미지02">
+          </li>
+          <li>
+            <img src="./images/footer/footer03.jpg" alt="푸터이미지03">
+          </li>
+          <li>
+            <img src="./images/footer/footer04.jpg" alt="푸터이미지04">
+          </li>
+          <li>
+            <img src="./images/footer/footer05.jpg" alt="푸터이미지05">
+          </li>
+          <li>
+            <img src="./images/footer/footer06.jpg" alt="푸터이미지06">
+          </li>
+          <li>
+            <img src="./images/footer/footer07.jpg" alt="푸터이미지07">
+          </li>
+          <li>
+            <img src="./images/footer/footer08.jpg" alt="푸터이미지08">
+          </li>
+        </ul>
+      </div>
+      <div class="footer_bottom">
+        <div class="footer_bottom01">
+          <div class="footer_sns">
+            <a href="https://www.instagram.com/visitjeju.kr/?hl=ko"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.youtube.com/c/visitjeju"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.facebook.com/visitjeju.kr/?locale=ko_KR"><i class="fa-brands fa-facebook-f"></i></a>
+          </div>
+          <div class="footer_center_number">
+            <p>고객 센터</p>
+            <p>064-740-6000</p>
+          </div>
+        </div>
+        <div class="footer_bottom02">
+          <div class="footer_logo">
+            <img src="./images/PC버전/footer/footer_logo01.png" alt="푸터 로고 이미지01">
+            <img src="./images/PC버전/footer/footer_logo02.png" alt="푸터 로고 이미지02">
+          </div>
+          <div class="footer_center_number">
+            <p>(63122) 제주특별자치도 제주시 선덕로 23(연동) 제주웰컴센터</p>
+            <p>관광문의 : 제주관광공사 Tel : 064-740-6000~1  ㅣ   FAX : 64-740-6090</p>
+            <p>사업자등록번호 : 616-82-21432</p>
+            <p>관광불편신고 : 제주관광불편신고센터(1533-0082)</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer_copyright">
+        <p>Copyright&copy;Visit_Jeju</p>
+      </div>
+    </footer>
+  </div>
+  <div class="aside">
+    <div class="quick_btn">
+      <div class="btn_top">Top</div>
+    </div>
+  </div>
+</body>
+</html>
+<!-- 검색<i class="fa-solid fa-magnifying-glass"></i>
+메뉴<i class="fa-solid fa-bars"></i>
+빈 하트<i class="fa-regular fa-heart"></i>
+채운 하트<i class="fa-solid fa-heart"></i>
+인스타<i class="fa-brands fa-instagram"></i>
+유튜브<i class="fa-brands fa-youtube"></i>
+페이스북<i class="fa-brands fa-facebook-f"></i>
+close<i class="fa-solid fa-xmark"></i>
+up<i class="fa-solid fa-caret-up"></i>
+<i class="fa-solid fa-angle-up"></i>
+down<i class="fa-solid fa-caret-down"></i>
+<i class="fa-solid fa-angle-down"></i>
+plus<i class="fa-solid fa-plus"></i>
+minus<i class="fa-solid fa-minus"></i> 
+toilet<i class="fa-solid fa-restroom"></i>
+park<i class="fa-solid fa-square-parking"></i>
+gate<i class="fa-solid fa-torii-gate"></i>
+home<i class="fa-regular fa-house"></i>
+right<i class="fa-solid fa-angle-right"></i>
+-->
+<!-- 가운데 점
+&#183     &#8901     &#8226
+섭씨기호
+&#8451;    	&deg; 
+-->

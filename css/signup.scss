@@ -1,0 +1,206 @@
+*{margin: 0; padding: 0;}
+li{list-style: none;}
+a{color: black; text-decoration: none;}
+
+img{
+display: block; width: 100%; height: auto;
+}
+html{font-size: 16px;}
+button{
+  cursor: pointer;
+}
+/***************** common ******************/
+$point-color:#FF7A80;
+$bold-grey:#ccc;
+$middle-grey:#ddd;
+$light-grey:#eee;
+$font-middle-grey:#666;
+$font-light-grey:#999;
+$white:white;
+$default-font:"Noto Sans", sans-serif;
+$default-font-size:16px;
+$default-font-color:#333;
+$scrollbar-color: $point-color $sub-color02;
+body{
+  color: $default-font-color;
+}
+@mixin section-magin{
+  margin: 0 10px 30px 10px;
+}
+@mixin size($width, $height){
+  width: $width;
+  height: $height;
+}
+@mixin buttonHeader{
+  background-color: $white;
+  border: none;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+@mixin buttonLogin{
+  border: none;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+@mixin buttonActive{
+  background-color: $point-color;
+  border: none;
+  border-radius: 20px;
+  box-sizing: border-box;
+  color: $white;
+}
+@mixin buttongrey{
+  background-color: $white;
+  border-radius: 20px;
+  border: 1px solid $light-grey;
+  box-sizing: border-box;
+  color: $middle-grey;
+  align-items: center;
+  text-align: center;
+}
+@mixin buttonGreen{
+  background-color: $white;
+  border-radius: 20px;
+  border: 1px solid $point-color;
+  box-sizing: border-box;
+  color: $point-color;
+  align-items: center;
+  text-align: center;
+}
+@mixin title{
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+@mixin flex{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+@mixin flex-around{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-evenly;
+}
+@mixin flex-between{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+}
+.contents_title{
+  margin: 0 20px 10px 10px;
+  width: calc(100% - 20px);
+  @include flex-between;
+  p{
+    font-size: 1.2rem;
+  }
+  .more{
+    a{
+      font-size: 0.8rem;
+      color: $font-light-grey;
+    }
+  }
+}
+.mb{margin-bottom: 30px;}
+/************** login_outer **************/
+.login_outer{
+  margin: 100px auto;
+  text-align: center;
+  h3{
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  p{
+    text-align: center;
+  }
+  >div{
+    >button{
+      margin: 10px;
+      height: 50px;
+      width: 230px;
+      padding: 10px;
+      @include buttonLogin;
+      a{
+        @include flex;
+      }
+    }
+  }
+  .kakao{
+    margin-top: 30px;
+    button{
+      margin-top: 30px;
+      background-color: #FEE500;
+      a{
+        i{}
+        p{}
+      }
+    }
+  }
+  .naver{
+    button{
+      background-color: #03C75A;
+      a{
+        span{
+          font-weight: bold;
+          color: $white;
+        }
+        p{color: $white;}
+      }
+    }
+  }
+  .apple{
+    button{
+      background-color: #000;
+      a{
+        i{color: $white;}
+        p{color: $white;}
+      }
+    }
+  }
+  .google{
+    button{
+      background-color: $white;
+      a{
+        i{}
+        p{color: $white;}
+      }
+    }
+  }
+  .line{
+    max-width: 500px;
+    margin: 30px auto;
+    display: flex;
+    height: 30px;
+    hr{
+      margin: 14px 0;
+      text-align: center;
+      border: none;
+      background-color: $font-light-grey;
+      height: 1px;
+      flex: 1;
+    }
+    p{
+      line-height: 30px;
+      text-align: center;
+      color: $font-light-grey;
+      margin: 0 10px;
+    }
+  }
+  .phone_outer{
+    background-color: #03C75A;
+    // max-width: 500px;
+    input{
+      display: none;
+    }
+    .phone_tab{
+      margin: 10px;
+      height: 50px;
+      width: 230px;
+      padding: 10px;
+      @include buttonLogin;
+    }
+  }
+}
