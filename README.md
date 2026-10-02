@@ -108,7 +108,7 @@ https://github.com/user-attachments/assets/3c777d1d-f665-41ac-b1fb-d682834eaea6
 
 ### GitHub
 ```text
-→ 링크만 깔끔하게
+→ (https://jeong-yujin-web.github.io/Jeju_Responsive_web/)
 ```
 ### 회고
 ```text
