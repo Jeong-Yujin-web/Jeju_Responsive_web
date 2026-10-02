@@ -107,9 +107,7 @@ https://github.com/user-attachments/assets/3c777d1d-f665-41ac-b1fb-d682834eaea6
 
 
 ### GitHub
-```text
-→ (https://jeong-yujin-web.github.io/Jeju_Responsive_web/)
-```
+https://jeong-yujin-web.github.io/Jeju_Responsive_web/
 ### 회고
 ```text
 → 반응형 웹사이트를 구현하며 화면 크기에 따른 레이아웃 변화와 콘텐츠 배치에 대해 고민해볼 수 있었습니다.
