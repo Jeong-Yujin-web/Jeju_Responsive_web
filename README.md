@@ -102,8 +102,7 @@ https://github.com/user-attachments/assets/3c777d1d-f665-41ac-b1fb-d682834eaea6
 
 ### Mobile
 <img width="300" height="480" alt="image" src="https://github.com/user-attachments/assets/49d269e2-61db-43a2-9034-59ce84ea2061" />
-<img width="300" height="480" alt="image" src="https://github.com/user-attachments/assets/8337abb9-e715-4e00-bd65-d4d6c8c6db8b" />
-<img width="300" height="390" alt="image" src="https://github.com/user-attachments/assets/d366b1f6-864e-45e2-b972-bf1a82f03958" />
+<img width="320" height="400" alt="image" src="https://github.com/user-attachments/assets/d366b1f6-864e-45e2-b972-bf1a82f03958" />
 
 
 
