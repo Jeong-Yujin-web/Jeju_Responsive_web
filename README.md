@@ -108,11 +108,10 @@ https://github.com/user-attachments/assets/3c777d1d-f665-41ac-b1fb-d682834eaea6
 ---
 ### GitHub
 https://jeong-yujin-web.github.io/Jeju_Responsive_web/
+
 ### 회고
-```text
 반응형 웹사이트를 구현하며 화면 크기에 따른 레이아웃 변화와 콘텐츠 배치에 대해 고민해볼 수 있었습니다.
 특히 Slick과 GSAP을 활용하면서 단순히 라이브러리를 적용하는 것보다 사용자 경험에 맞게 조건을 설정하고
 제어하는 과정이 중요하다는 것을 배웠습니다.
 
 앞으로는 접근성과 웹 표준까지 고려하여 다양한 사용자가 편리하게 이용할 수 있는 웹사이트를 구현하고자 합니다.
-```
