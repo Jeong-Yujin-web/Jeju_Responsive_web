@@ -67,7 +67,8 @@ jeju
 └─ sub_page.html
 ```
 
-### ⭐ 주요 구현 내용 
+## ⭐ 주요 구현 내용 
+
 
 #### 01. PC / Mobile 반응형 슬라이더
 https://github.com/user-attachments/assets/a38d6772-abb0-4c27-bc29-08c0545e15c9
@@ -92,12 +93,11 @@ https://github.com/user-attachments/assets/3c777d1d-f665-41ac-b1fb-d682834eaea6
 
 ## 🖥️ 실행 결과
 
-### PC
-<img width="430" height="850" alt="image" src="https://github.com/user-attachments/assets/c177b8cb-3fb5-40ee-8322-2ab29e2b6a62" />
 
+### PC & Tablet
 
-### Tablet
-<img width="480" height="640" alt="image" src="https://github.com/user-attachments/assets/454ca9c6-203b-4261-9cfc-0edb8974ae3f" />
+<img src="https://github.com/user-attachments/assets/c177b8cb-3fb5-40ee-8322-2ab29e2b6a62" width="400" height="640"/>
+<img src="https://github.com/user-attachments/assets/454ca9c6-203b-4261-9cfc-0edb8974ae3f" width="400" height="550"/>
 
 
 ### Mobile
@@ -105,7 +105,7 @@ https://github.com/user-attachments/assets/3c777d1d-f665-41ac-b1fb-d682834eaea6
 <img width="320" height="400" alt="image" src="https://github.com/user-attachments/assets/d366b1f6-864e-45e2-b972-bf1a82f03958" />
 
 
-
+---
 ### GitHub
 https://jeong-yujin-web.github.io/Jeju_Responsive_web/
 ### 회고
