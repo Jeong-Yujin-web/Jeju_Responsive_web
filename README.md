@@ -72,8 +72,8 @@ jeju
 
 
 #### 01. PC / Mobile 반응형 슬라이더
-https://github.com/user-attachments/assets/a38d6772-abb0-4c27-bc29-08c0545e15c9
 
+https://github.com/user-attachments/assets/a38d6772-abb0-4c27-bc29-08c0545e15c9
 
 ```text
 → Slick을 활용해 PC 환경에서는 3개의 콘텐츠가 노출되는
@@ -84,10 +84,9 @@ https://github.com/user-attachments/assets/a38d6772-abb0-4c27-bc29-08c0545e15c9
   콘텐츠가 자연스럽게 노출되도록 반응형으로 처리하였습니다.
 ```
 
-
 <details>
-<summary>코드보기</summary>
-  
+<summary>🔍 main.js (Slick 반응형 슬라이더 로직) 펼치기</summary>
+
 ```js
 const contents02Slider = $('.contents02_box_outer');
 
@@ -126,8 +125,8 @@ function initContents02Slider() {
 }
 
 initContents02Slider();
-
 ```
+
 </details>
 
 #### 💡 셀프 코드리뷰 & 배운 점
@@ -138,10 +137,10 @@ initContents02Slider();
 
 * **앞으로의 보완점**: 현재는 `769px`을 기준으로 Slick을 적용하거나 해제하고 있습니다. 앞으로는 화면 크기가 변경되는 상황에서도 슬라이더가 안정적으로 동작하도록 `resize` 이벤트를 활용하여 초기화와 해제 과정을 관리하는 방식으로 개선해 보고 싶습니다.
 
-
 #### 02. PC / Mobile 반응형 시설 안내 팝업
 
 https://github.com/user-attachments/assets/3c777d1d-f665-41ac-b1fb-d682834eaea6
+
 ```text
 → PC와 Mobile / Tablet 환경의 UI 구조 차이를 고려하여 시설 안내 팝업을 반응형으로 구현하였습니다.
   시설 위치에 따라 화장실과 주차장 팝업을 표시하고,
@@ -150,11 +149,10 @@ https://github.com/user-attachments/assets/3c777d1d-f665-41ac-b1fb-d682834eaea6
 ```
 
 <details>
-<summary>코드보기</summary>
+<summary>🔍 main.js (시설 안내 팝업 로직) 펼치기</summary>
 
 ```js
 const popupBg = $('.popup_bg');
-
 const facilitiesToiletOpen = $('.facilities_toilet_open');
 const facilitiesToiletClose = $('.facilities_toilet_close');
 const facilitiesToiletPopup = $('.facilities_toilet_popup');
@@ -220,6 +218,7 @@ facilitiesParkingClose.click(function () {
 * **팝업 간 상태 제어**: 화장실 팝업과 주차장 팝업이 동시에 표시되지 않도록 다른 팝업을 닫은 후 선택한 팝업을 표시하도록 처리했습니다. 여러 UI 요소의 상태가 서로 영향을 주는 상황에서 각각의 상태를 함께 관리하는 방법을 배울 수 있었습니다.
 
 * **앞으로의 보완점**: 현재는 화장실과 주차장 팝업을 각각 변수와 이벤트로 나누어 관리하고 있습니다. 시설 종류가 추가될 경우 코드가 길어질 수 있기 때문에, 앞으로는 시설 정보를 객체나 배열로 관리하여 공통 로직으로 처리할 수 있도록 개선해 보고 싶습니다.
+
 
 ## 🖥️ 실행 결과
 
