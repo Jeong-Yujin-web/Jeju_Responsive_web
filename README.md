@@ -25,6 +25,7 @@
 기존 웹사이트의 복잡한 정보 구조와 투박한 레이아웃을 개선하고,
 필요한 정보를 직관적으로 탐색할 수 있도록 UI/UX와 반응형 환경을 구축하는 것을 목표로 하였습니다. 
 ```
+
 ## ✨ 주요 기능
 
 - 메인 / 서브 / 상세 / 로그인 페이지 구현
@@ -83,10 +84,11 @@ https://github.com/user-attachments/assets/a38d6772-abb0-4c27-bc29-08c0545e15c9
   콘텐츠가 자연스럽게 노출되도록 반응형으로 처리하였습니다.
 ```
 
+
 <details>
-```
-<summary>
+<summary>코드리뷰</summary>
   
+```js
 const contents02Slider = $('.contents02_box_outer');
 
 function initContents02Slider() {
@@ -125,9 +127,9 @@ function initContents02Slider() {
 
 initContents02Slider();
 
-</summary>
 ```
 <details>
+
 #### 💡 셀프 코드리뷰 & 배운 점
 
 * **Slick을 활용한 반응형 슬라이더 구현**: PC 환경에서는 Slick을 활용해 여러 콘텐츠가 한 번에 보이는 슬라이더를 구현하고, 모바일 환경에서는 Slick을 해제하여 콘텐츠가 자연스럽게 노출되도록 처리했습니다. 화면 크기에 따라 플러그인의 동작을 다르게 적용하면서 반응형 환경에서 기능을 제어하는 방법을 익혔습니다.
@@ -147,12 +149,10 @@ https://github.com/user-attachments/assets/3c777d1d-f665-41ac-b1fb-d682834eaea6
   배경 오버레이와 함께 팝업을 표시하도록 구현하였습니다.
 ```
 
-```
-
 <details>
-```
-<summary>
-  
+<summary>코드리뷰</summary>
+
+```js
 const popupBg = $('.popup_bg');
 
 const facilitiesToiletOpen = $('.facilities_toilet_open');
@@ -207,8 +207,8 @@ facilitiesParkingClose.click(function () {
     popupBg.fadeOut(200);
   }
 });
-</summary>
 ```
+
 <details>
 
 #### 💡 셀프 코드리뷰 & 배운 점
