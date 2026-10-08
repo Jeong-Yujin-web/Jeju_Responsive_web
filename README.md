@@ -86,7 +86,7 @@ https://github.com/user-attachments/assets/a38d6772-abb0-4c27-bc29-08c0545e15c9
 
 
 <details>
-<summary>코드리뷰</summary>
+<summary>코드보기</summary>
   
 ```js
 const contents02Slider = $('.contents02_box_outer');
@@ -128,7 +128,7 @@ function initContents02Slider() {
 initContents02Slider();
 
 ```
-<details>
+</details>
 
 #### 💡 셀프 코드리뷰 & 배운 점
 
@@ -150,7 +150,7 @@ https://github.com/user-attachments/assets/3c777d1d-f665-41ac-b1fb-d682834eaea6
 ```
 
 <details>
-<summary>코드리뷰</summary>
+<summary>코드보기</summary>
 
 ```js
 const popupBg = $('.popup_bg');
@@ -209,7 +209,7 @@ facilitiesParkingClose.click(function () {
 });
 ```
 
-<details>
+</details>
 
 #### 💡 셀프 코드리뷰 & 배운 점
 
