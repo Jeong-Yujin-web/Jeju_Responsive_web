@@ -10,7 +10,7 @@
 ```text
 기획서 프로젝트의 기획 배경과 요구사항은 아래 문서에서 확인할 수 있습니다.
 
-👉 [기획안 PDF 보기](./docs/Visit%20jeju_Team%20Project.pdf)
+👉 [기획안 PDF 보기](./docs/Visitjeju_TeamProject.pdf)
 ```
 
 ## 🖥️ 프로젝트 소개
