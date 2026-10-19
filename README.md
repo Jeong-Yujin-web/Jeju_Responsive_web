@@ -74,7 +74,6 @@ https://github.com/user-attachments/assets/a38d6772-abb0-4c27-bc29-08c0545e15c9
   콘텐츠가 자연스럽게 노출되도록 반응형으로 처리하였습니다.
 ```
 
-<br><br>
 
 💡 셀프 코드리뷰
 * Slick 활용
@@ -128,6 +127,8 @@ initContents02Slider();
 
 </details>
 
+<br><br>
+
 #### 02. PC / Mobile 반응형 시설 안내 팝업
 
 https://github.com/user-attachments/assets/3c777d1d-f665-41ac-b1fb-d682834eaea6
@@ -138,7 +139,7 @@ https://github.com/user-attachments/assets/3c777d1d-f665-41ac-b1fb-d682834eaea6
   PC에서는 필요한 팝업만 노출하며 Mobile / Tablet에서는
   배경 오버레이와 함께 팝업을 표시하도록 구현하였습니다.
 ```
-<br><br>
+
 
 💡 셀프 코드리뷰
 * window.matchMedia()를 활용해 화면 크기에 따른 팝업 동작 구분
@@ -207,6 +208,7 @@ facilitiesParkingClose.click(function () {
 
 </details>
 
+<br><br>
 
 ## 🖥️ 실행 결과
 
