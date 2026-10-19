@@ -59,23 +59,7 @@ jeju
 └─ sub_page.html
 ```
 
-## 📋 에피소드
-
-### 01. 반응형 슬라이더 구현
-PC에서는 Slick을 적용하고 Mobile·Tablet에서는 해제하여 화면 크기에 따른 콘텐츠 노출 방식을 다르게 구현했습니다.
-
-- **배운 점:** JavaScript를 활용한 반응형 플러그인 제어
-- **보완점:** `resize` 이벤트를 활용한 안정적인 슬라이더 관리
-
-### 02. 시설 안내 팝업 구현
-jQuery와 `window.matchMedia()`를 활용해 화면 크기별 팝업을 구현하고, 여러 팝업이 동시에 열리지 않도록 제어했습니다.
-
-- **배운 점:** 반응형 UI 구현 및 팝업 상태 관리
-- **보완점:** 객체와 배열을 활용한 공통 로직으로 코드 간소화
-
-
 ## ⭐ 주요 구현 내용 
-
 
 #### 01. PC / Mobile 반응형 슬라이더
 
@@ -90,10 +74,14 @@ https://github.com/user-attachments/assets/a38d6772-abb0-4c27-bc29-08c0545e15c9
   콘텐츠가 자연스럽게 노출되도록 반응형으로 처리하였습니다.
 ```
 
+<br><br>
+
 💡 셀프 코드리뷰
 * Slick 활용
 * window.innerWidth와 slick-initialized를 활용해 화면 크기에 따른 슬라이더 초기화 및 해제
-✅ 화면 크기 변경 시에도 정상적으로 동작하도록 resize 이벤트 활용
+#### ✅ 화면 크기 변경 시에도 정상적으로 동작하도록 resize 이벤트 활용
+
+<br><br>
 
 <details>
 <summary>🔍 main.js (Slick 반응형 슬라이더 로직) 펼치기</summary>
@@ -150,10 +138,13 @@ https://github.com/user-attachments/assets/3c777d1d-f665-41ac-b1fb-d682834eaea6
   PC에서는 필요한 팝업만 노출하며 Mobile / Tablet에서는
   배경 오버레이와 함께 팝업을 표시하도록 구현하였습니다.
 ```
+<br><br>
 
 💡 셀프 코드리뷰
 * window.matchMedia()를 활용해 화면 크기에 따른 팝업 동작 구분
- ✅ 반복되는 팝업 열기·닫기 로직을 공통 함수로 정리
+#### ✅ 반복되는 팝업 열기·닫기 로직을 공통 함수로 정리
+
+<br><br>
 
 <details>
 <summary>🔍 main.js (시설 안내 팝업 로직) 펼치기</summary>
